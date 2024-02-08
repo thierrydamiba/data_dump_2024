@@ -3,13 +3,13 @@
 ## Resume
 
 ● Built and deployed 5 classification models in Databricks notebooks using sklearn, regex, and n-grams saving adjudicators over 8 hours a week. 
+
 ● Conceptualized and deployed 5 dashboards to Tableau via Jenkins to provide actionable insights and help the company transition to a data driven approach. 
+
 ● Drove business value analysis for major tool in the company which helped capture the value of the application. 
 
-Data Scientist 
-SAIC 
-Aug 2020 - Oct 2021 (1 year 3 months) 
 ● Created a forecasting model using Prophet and built a dashboard in Tableau to predict the effect of Covid on the business. 
+
 ● Performed big data analysis on Databricks using Python and SQL to provide metrics. 
 
 ## Currently working on
