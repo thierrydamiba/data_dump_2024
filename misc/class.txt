@@ -1,0 +1,2673 @@
+Hamza Farooq
+00:00:17
+Awesome. Hey, everyone! Can you all hear me and see me? And Loki also see Loki?  no. His name is Loki LO. Ki. Okay.
+Hamza Farooq
+00:00:29
+everyone, those who don't know me. My name is Hamza. I have been an instructor for a few years, and I'll I'll give you more details about me as as we go through the class.
+Hamza Farooq
+00:00:43
+I wanna first welcome you all for coming to the session. Thank you for signing up. There's some of you who have taken a course with me before. There's some who are new on. So I think what I'm gonna do is just wanna get a feel of the folks who are joining, so just use your thumbs up
+Hamza Farooq
+00:00:59
+to just mention if you haven't. If you have never met before.
+Hamza Farooq
+00:01:03
+just use that em Emoji thumbs up emoji that really helps.
+Hamza Farooq
+00:01:09
+And
+Hamza Farooq
+00:01:11
+I'm just gonna say, this is gonna be a very interesting course it took us a while to put this together.
+Hamza Farooq
+00:01:17
+and there's a whole team behind it who sort of. We worked
+Hamza Farooq
+00:01:22
+quite some time getting this course up and running
+Hamza Farooq
+00:01:26
+and there, there's some part of it which are still experimental. So we'll learn from this experience, and we'll we'll we'll push it, or to grow into other parts.
+Hamza Farooq
+00:01:37
+Alright without further ado I should go ahead, share my screen.
+Hamza Farooq
+00:01:43
+Excuse me, can you all see my screen? It's amazing. Alright! Let me expand it over here. Alright!
+Hamza Farooq
+00:01:54
+Alright. So if the first module, that we're gonna work on is gonna discuss enterprise rag, and we will be working on something called, which is which we have created from scratch. It's called semantic cash.
+Hamza Farooq
+00:02:06
+Now, all the stuff that we'll do is not something that we are just teaching you this. This is a part of the company that I run, and we have built products for them, for for the company which I'm making them available through the courses.
+Hamza Farooq
+00:02:22
+So anything and everything that you see that is custom built.
+Hamza Farooq
+00:02:27
+It's pretty much something that we have in implemented ourselves, and we are going to use it in. We use it in our, in our work, and we would love for you to learn about it, and sort of apply that in the in your use cases.
+Hamza Farooq
+00:02:40
+So just a brief video about me. My name is Humza. I run a company which is called traversal.ai. I've been running it for the past 6, 7 months before that I was at Google, and before Google, I was at Walmart labs. It's about 10 years of my life A few years before that I was in management consulting. I don't know what I was doing, but I was doing something.
+Hamza Farooq
+00:03:01
+And I am also an adjunct professor at Stanford and Ucla, and over there also it similar courses. I have another course. Excuse me.
+Hamza Farooq
+00:03:13
+I have another course that I run on foundational Llms. Some of you. I think there are quite a few of you here who have taken that course. And you know I'm happy to that. You are. You're coming from that course onto this advanced version this advanced course was
+Hamza Farooq
+00:03:31
+pushed for. I was pushed to put this together by a couple of folks. There's a log. And Zenup, who basically were like, we need to make this course. They previously took my co-course with me, and it's like we need to go to the next level. That's where we started putting together this course a month ago.
+Hamza Farooq
+00:03:50
+and it will. We're gonna cover a lot of things.
+Hamza Farooq
+00:03:54
+I wanna I want you to meet the team. I don't know how many of them have signed up are shown up. But we have. I've been working with Najila the first person I don't know if I see her on the call Najilia. Are you on the call?
+Hamza Farooq
+00:04:09
+She's not. It's okay. So she basically she she helps has helped me put together the course other than that. There's 3 other people who who have been working with but do do you want to introduce yourself?
+Batool Haider
+00:04:27
+Hello! Can you hear me? Yes, we can hear you.
+Batool Haider
+00:04:30
+Oh, hello, everybody! This is batul heather. I work as the head of AI for Travis. So before traviso. I served as an applied scientist for Amazon AI. For about 5 years and prior to that was working in a bunch of different companies. And I started all of this at Stanford. As a grad student as well as a research assistant. So glad to see all of you here
+Hamza Farooq
+00:04:55
+awesome, and you'll be seeing a lot of things that you know, batu will be involved in a lot of part parts of this course. She is. Gonna be publishing a lot about other things. Research projects also. So it'd be great to, you know. Reach out to her, connect with her.
+Hamza Farooq
+00:05:11
+You'll you'll learn a lot from her. We have Kamal on our team. Kamal, recently joined our team. Kamal, you wanna introduce yourself?
+kanwalmehreen
+00:05:21
+Yeah, sure. So my name is Kabil and I recently joined Traversal as developer advocate. Ml. And so I also work as a technical content writer at Katyina gets for over 1.5 years nice to meet you all, and I hope that yeah, this go
+Hamza Farooq
+00:05:42
+awesome. We have also Dashl over here, Dashiell. It will be joining a little later, and he'll be leading one of the sessions, so he will join the team. So
+Hamza Farooq
+00:05:53
+it took almost 5 of us, and one month of Tom stop work to put together some of this. So please know, this is a lot of this is experimental. We're learning it as we go, but we will work with you to improve it and we'll try to. You know. Get your feedback and implement more things as we go.
+Hamza Farooq
+00:06:10
+Now, this is the money slide. Ii call this the money side, because this is our major overview of what we intend to cover in this.
+Hamza Farooq
+00:06:20
+So we expect you to know what drag is. We expect you to have worked on drag. We expect you to have an understanding on ve what vector databases are?
+Hamza Farooq
+00:06:29
+And you kind of am implemented in some form or the other, like on a collapse notebook or a Jupiter notebook, or you've taken a course with me or some other company. There's few folks who have taken a course with data since Dojo, also, where I actually also teach.
+Hamza Farooq
+00:06:45
+But
+Hamza Farooq
+00:06:46
+the idea is that you know what drag is. And you're like, okay, I want to take rag to the next level. I want to start thinking about production level stuff.
+Hamza Farooq
+00:06:54
+I want to think about how we connect cloud networks to each other. I want to know, how do we make sure that all the different endpoints are connected to each other in a production manner.
+Hamza Farooq
+00:07:04
+It can be small data.
+Hamza Farooq
+00:07:06
+But you can't run a Jupiter notebook as a product, right? You have to put it into a cloud. So we will be working on that part. So I'm I'm just gonna say that if you haven't worked on rags.
+Hamza Farooq
+00:07:19
+please reach out to me right after this class, and maybe I can move you to the foundational course. I have an understanding that you know Drag, and you have hands on experience of python, or you have a good understanding of how Python works. And you can write code.
+Hamza Farooq
+00:07:35
+because this course is going to push you
+Hamza Farooq
+00:07:39
+in every possible way. This is. This is going to be a difficult course, not because we've made it difficult, but because production is difficult, and we've tried to make it as easy as possible for you to consume it. It's not a math, heavy course. It's not math heavy. It's code heavy. You're gonna write code on your own. And you're gonna build stuff that you that is not available on Youtube. So this is the the version. 2 of you know the real world, which is
+Hamza Farooq
+00:08:08
+most of the things that you will see here. Some form of them are not available on
+Hamza Farooq
+00:08:13
+are not available on Youtube because they only show you do. Jupiter. Notebooks will show you. Gcp, aws, azure. And we've I've sent an email. I will be following up an email also, but different things about that.
+Hamza Farooq
+00:08:26
+So what are we gonna cover in this course, we're gonna start with discussing enterprise rag as a major theme.
+Hamza Farooq
+00:08:33
+The first class we will talk about is semantic caching and how to build it from scratch like you will. We will write code like I've written the code. You will see it, but the code is basically the bare minimum of what you need to do. Semantic caching. And I'll explain you what semantic caching is. But semantic caching is a step beyond the normal version of caching.
+Hamza Farooq
+00:08:55
+So we will be covering that. And then the second part of this today we will integrate something similar with Gcp, so you will spin up your Gcp environment and you will pull data from somewhere, push it to your own big query
+Hamza Farooq
+00:09:09
+and use that data to create a drag application right today in the class on with reddish integration.
+Hamza Farooq
+00:09:17
+So I just want to get let you know. This is I mean, we've done snorkeling, most of us, or some of it done snorkeling in our life. This is scuba diving. so you will be in what, in the deep waters from day one. And this is by design. This course is called advanced. This is for that very reason.
+Hamza Farooq
+00:09:36
+If it tingles you. I really like that because it's me. It makes me feel that you're ready for the for the next in, and I've worked with some of you, so I know you're all ready for that.
+Hamza Farooq
+00:09:46
+So the second, the then we'll talk talk about in the next class. We'll talk about guardrail for Llms, and we'll go into Nemo. Nemo Godre's. We go deeper into how different architectures of Godrell look like one of the versions that that has been created by Nvidia. We'll discuss that.
+Hamza Farooq
+00:10:06
+Then we'll go to model hosting on a local ma, a local machine, for example, a collab notebook with the or something like that, and we'll also look into run ports. So run port. Basically, I know some of you were trying to set up Run, Port Run port. You will have to add money about $15, but it should be enough for you to get started.
+Hamza Farooq
+00:10:24
+and then we will build an inference endpoint. So you basically, right now, like you use open. AI. You will build your own infill's endpoint. because
+Hamza Farooq
+00:10:35
+when you let's say you work in an organization, you work in a Fintech, you work in a healthcare. They do not allow you to use open AI to build applications. You have to use your own local. So we'll teach you how to build your own local infants, which means that
+Hamza Farooq
+00:10:49
+you will have an Api key which is hosting somewhere.
+Hamza Farooq
+00:10:54
+and that, Api you can use to generate your own rack in a different environment. That's the power that we want to push you so. And then we'll sort of try to take a break a week, a week break so that you can cover up on those topics
+Hamza Farooq
+00:11:08
+from there. What we'll do is that we'll look into
+Hamza Farooq
+00:11:12
+advanced retrieval techniques which are just beyond the cosine similarity and basic ones we look into call board. We'll look into sparse vectors. We look into a a, a bunch of things.
+Hamza Farooq
+00:11:23
+Finally, we'll go into fine tuning with Rlhs and Tpo. These are the dpo is the most recent version of fine-tuning.  then we'll go into modern merging, which is a new technique again, which has, you know, you will be converging models together to see mixture of mixture of experts or something like that.
+Hamza Farooq
+00:11:46
+Finally, last but not least, we'll teach you how, or we'll try to teach you how to integrate with Node. Js, so you can build your own.
+Hamza Farooq
+00:11:54
+So web site, which has AI in embedded in it. This is, I've put a tool because this is gonna be a more experimental part, because this will go beyond no js, like we. So we'll tell you what to do with no Gs, it's not like, oh, we're gonna just leave you in the middle.
+Hamza Farooq
+00:12:12
+But the idea is, I just do not like the fact that you just use python and show python you. You call it a day. We'll teach you how a software engineering work will come into play. Richard, I'm looking at you right now. I would need your help
+Hamza Farooq
+00:12:25
+in in some of this. For anyone who knows? Richard has helped us in the previous courses. He comes with extremely amazing background and software engineering and he's trusted us with the second time to come in, you know. Be on this course, going to pause here. I know I've taken a lot Eric. Let's start with you.
+Eric Brichetto
+00:12:43
+So when we are talking about the enterprise rag, will we be dedicating any time to online rag online being connected to the web? Or will it be primarily or solely focused on offline rag.
+Hamza Farooq
+00:12:59
+You know, I want to. II wouldn't run a class without talking about online Llm, so in today's class, we'll talk about online Llm, and we'll every single class will talk about online Llms. I don't know how much we can cover on how to build it from scratch, but there is an Api endpoint that we have made, and we would love for you to use that to build your products.
+Hamza Farooq
+00:13:17
+So we'll we will take you to this. So our enterprise rag, all our applications will have an online search and an offline search. When I say offline, it's proprietary data, it's static. The online is that you will search in real time on Internet and find an answer.
+Hamza Farooq
+00:13:34
+And we have built an Api for you for this class. So you can use that for free. So you don't have to pay for it. It's for free. But basically, you will be using that to build applications. And the first class today on semantic caching we will be talking about that.
+Hamza Farooq
+00:13:52
+Good.
+Kurt Lozier
+00:13:54
+Yes, Homs on the fine-tuning. Any chance we'll have an opportunity to touch on
+Kurt Lozier
+00:14:00
+RLAI. F. And the reason why I'm asking has to do with bias and healthcare.
+Kurt Lozier
+00:14:07
+You know some of the
+Kurt Lozier
+00:14:10
+you know, learning with. you know, with human reinforcement.
+Kurt Lozier
+00:14:16
+has shown bias.
+Kurt Lozier
+00:14:18
+particularly because of the age groups and the and the
+Kurt Lozier
+00:14:23
+cultural make ups of the people. And that's a big thing in healthcare right now.
+Kurt Lozier
+00:14:28
+So I'm wondering
+Kurt Lozier
+00:14:30
+on the if if you know
+Kurt Lozier
+00:14:34
+some of what I've read on trying to get rid of that bias using Rl, AI app
+Kurt Lozier
+00:14:39
+can can help there.
+Hamza Farooq
+00:14:41
+I think.
+Hamza Farooq
+00:14:43
+since that class is not made yet, we can definitely do that.
+Hamza Farooq
+00:14:47
+This is this is the great power of about the course that we have, building it it up as we go. So we'll take your feedback and say, Hey, can you add this, or you know, so we'll evaluate that part. So code as you mentioned, and I will sort of look into it again, having a team helps kamal and batul, and all the folks on Dashi on the call. They'd be helping us, you know, build the course so we will work on that
+Kurt Lozier
+00:15:11
+awesome. Thank you.
+Hamza Farooq
+00:15:12
+Thank you. Alright. I think we have. Dashi here, Dasha, do you want to give an intro about yourself? We missed you earlier on.
+darshil
+00:15:19
+Yeah, sure, sure. Hey, it's nice to meet you all. I'm Darschil, and I'm currently pursuing masters in computer science from Santa Clara University. I have about 3 to 4 years of experience with artificial intelligence machine learning, computer vision and Lp, and I've been working with thumbs since more than a year now. He was a professor at Santa Clara University for one of the course, and that's where we met about a year ago, and since then we have been working together on different projects.
+darshil
+00:15:49
+Nice to meet you.
+Hamza Farooq
+00:15:51
+Awesome. So if there's any problem, your life is falling apart. Just message. Make your life easier. Okay, a few more things to cover, and we'll be on our way. This is the synchronous class. Please keep your video on as much as possible. See I'm I make this joke. This joke is getting old. I need to get a new joke, but we all have bad hair day
+Hamza Farooq
+00:16:11
+and you can see, as you know, I didn't make my hair today. But what I would love to do is have your video on so I can look at you. You can. You can give me your reactions if you read something. If you see something. This is just for us to interact. It helps me. Remember who you are. It helps with this research. That shows if you have your video on, you're able to concentrate better. Si, I'm looking at you for that. But the idea is that have your video on
+Hamza Farooq
+00:16:40
+is is just, I know sometimes you have to turn it off. I understand it's that we all have things to do, but it will be good to interact with you all, and just learn on your experience. And some of you have taken a class with me before. So you know what I'm what I mean, and how how we work
+Hamza Farooq
+00:16:56
+alright. Raise your hand virtually, or drop in a question in in the chat we have. You know we have Dashiell, who will be Dasha and Kamal, who will be, you know, following up on all the questions that you have. So we will basically follow up on the theme of the questions. And sometimes,
+Hamza Farooq
+00:17:14
+sometimes you know, what happens is that I miss a question. Dashl and Kabul will make sure. Sort of you know I will. I will be able to answer answer that.
+Hamza Farooq
+00:17:23
+I know there are a few of almost 30 people. So I wanna make sure that
+Hamza Farooq
+00:17:27
+we don't wanna concentrate all the questions at the same time. So I'm gonna take pause this as we go through the through the question, so that we can make sure that all the questions that are asked are being, you know, answered.
+Hamza Farooq
+00:17:38
+I just wanna make sure that recording is started.
+Hamza Farooq
+00:17:42
+Yeah, it is just running. So okay, okay.
+Hamza Farooq
+00:17:47
+hold on what happened.
+Hamza Farooq
+00:17:56
+For some reason, my keyboard decided not to work on me today. Okay. please take your assignment seriously.
+Hamza Farooq
+00:18:02
+The assignments will help you understand, and learn over the course as much as as possible. When in doubt use slack, I have put the link to slack channel in the
+Hamza Farooq
+00:18:17
+in the module. So if you go here you will excuse me. If you go to the slack Channel link, you will be able to join the slack channel
+Hamza Farooq
+00:18:27
+in that slack channel. You should be able to sort of converse with everyone. You know, you can see the entire class. You can talk to someone, and then there is a there is a entire group that I've made, which is called Advanced Lm. 2024, 0 one. That's a very large name, but that's the group dedicated to our cohort.
+Hamza Farooq
+00:18:45
+So please make sure that you join that channel there should, if you can, share that link also within the slack, or you know, because you first have to join Slack, and once you have joined slack, then you'll be able to join that chat.
+Hamza Farooq
+00:19:01
+So please make sure that you're that you are able to join.
+Hamza Farooq
+00:19:07
+alright and okay.
+Hamza Farooq
+00:19:12
+Alright. And
+Hamza Farooq
+00:19:15
+when in doubt use slack, I will try to answer all questions.
+Hamza Farooq
+00:19:20
+okay.
+Hamza Farooq
+00:19:21
+alright. Please note, all recordings are automatically available after the session. We record everything other than office hours. The reason we don't record office hours is because I'm very controversial during our office hours, and I go in a tangent. But the idea is for you to come to the office hours. Just have a conversation. It's not, for it's not, for it's low for the individual learning. It's not to sort of push you
+Hamza Farooq
+00:19:44
+to re-watch the office hours. Also, if you have a if you have a concern. If you have something that's not working out. If you just a random question, come to the office hour we will sort of fix them.
+Hamza Farooq
+00:19:55
+We will probably do office hours on Thursdays or Fridays. We will. We're still figuring out the time for that.
+Hamza Farooq
+00:20:02
+also. We might take a break in the middle, like after the first 2 classes, we might give a pause for a week, just so that you can cover up because I'm gonna push you in the deeper end, right from today. Please be ready for that
+Hamza Farooq
+00:20:17
+and that that II know, although a local love this. So although this is for you, you who are gonna jump in and we're gonna do a lot of fun stuff.
+Hamza Farooq
+00:20:26
+I also want you to all to know a look, aloe is is leading our Sf Bay Area chapter. So if anyone is in the Bay area
+Hamza Farooq
+00:20:34
+and we can figure out a time to meet, we tried to do earlier
+Hamza Farooq
+00:20:37
+last month, but unfortunately there was a lot of rain. But look, do you want to give an intro about yourself?
+Alok Abhishek
+00:20:45
+Hey? Everyone! I got to know Hamza through a Stanford continuation class. It's been fun. I'm product manager working in Florida management. And I do technical. Mla, I guess on site, also at the work, but mostly on the side. And it's been fun learning
+Alok Abhishek
+00:21:06
+through and and participating in the class and look forward to getting to know you. For people in Bay Area we can organize a meetup and get to know each other.
+Hamza Farooq
+00:21:18
+Awesome. Alright
+Hamza Farooq
+00:21:22
+again. Last part I know that I've I've come with a lot of disclaimers this time. This is an extremely technical course in terms of coding. You will need to code. And I'm not trying to scare you off. I'm just trying to get you excited. A lot of courses do not offer coding. We are the ones who offer python coding
+Hamza Farooq
+00:21:39
+from day one, and we'll push you to do it, because that's the only only we're doing it yourself is the way you may make teams on your own, or submit assignments on your own, but nevertheless, you have to submit an assignment. If you submit an assignment as a team, please
+Hamza Farooq
+00:21:55
+add your name
+Hamza Farooq
+00:21:56
+and the other person's name, who, on host, we have your submitting. We have to keep a track on who's submitting assignments. Now, previously there was no way to to figure out. But now we are able to to understand how to how to do that.
+Hamza Farooq
+00:22:10
+So we will be working on that
+Hamza Farooq
+00:22:15
+awesome alright. All the funds, all the you know disclaimers are gone now. The fun stuff
+Hamza Farooq
+00:22:21
+what we will both. Talk about today.
+Hamza Farooq
+00:22:24
+We'll talk about drag back again. I mean, we'll definitely I have to mention drag then we'll start talking about enterprise rags, you know, as we should be building building. Search all over.
+Hamza Farooq
+00:22:36
+Then I will take you through a code on how to build semantic cash from scratch. You will work with me on that code, and then we will discuss on integration with Gcp. And Redis. We have an entire code for that.
+Hamza Farooq
+00:22:49
+So everything I say has a code, and that code is available right here. So if you go here, you click on this.
+Hamza Farooq
+00:22:56
+You should be able to see the collagen box.
+Hamza Farooq
+00:23:02
+Why does it not go away. Okay.
+Hamza Farooq
+00:23:04
+if you click here. So there will be 2 collab notebooks that are available to you. This is an original, this one that you see right now isn't originally from Gcp. We rewrote this entire to match to a data set of our own and connect that to Redis.
+Hamza Farooq
+00:23:21
+And I've made some modifications, so that there was some things that I didn't like about the set. So I basically created some things on my own. So now you will be, we will be able to use use this
+Hamza Farooq
+00:23:34
+alright awesome.
+Hamza Farooq
+00:23:38
+So let's get started.
+Hamza Farooq
+00:23:40
+Why are we here? So this is the most fun part. Why are we here? We're here because a year ago you, some of us heard about Chat Gbt, and we started using it to write. Teachers started using to write questions I started using, you know, to
+Hamza Farooq
+00:23:57
+actually, I was the teacher at that time. So I was using questions. It's actually quite interesting. Exactly. A year ago I was teaching at over here his his class Center university, and I give them a teaching us assignment. And 99% of them were using Chat Gp. During the class during the exam that we're using Chat Gp. Because it was on the.
+Hamza Farooq
+00:24:19
+And it was such a shock to me because I didn't expect them. I expect them to use stack, overflow, or something like that. But they were just writing Chat Gp code, but the fun part was they were. They were adding Chiang Gp code, which was older code
+Hamza Farooq
+00:24:34
+so it wouldn't run in python. And they were getting more and more frustrated.
+Hamza Farooq
+00:24:38
+So it was a close loop problem like it was a circular problem. They would write. They would try to write code, read this data, file or read this or read, or something like that, and it was just give them code, which was, which is an old code. So they would just be fixated on trying to solve debug the python, and then they would go to stack, overflow, and would say, You know, it was just.
+Hamza Farooq
+00:25:00
+It was such an interesting thing to see but and then the second and the third part is, you know, we've been using for now one year chargeivity of crossed more users than probably people in this world.
+Hamza Farooq
+00:25:13
+and you know it's doing a lot of things for you.
+Hamza Farooq
+00:25:16
+And then there's the overhype AI startups hopefully, not mine, my startup. But there are startups which are more of a chat. Gpd, wrap, or you've seen them like you've seen how things have grown, and
+Hamza Farooq
+00:25:28
+coming down there are some startups. I mean, where you probably know that Sora came out the other day and
+Hamza Farooq
+00:25:37
+and a lot of Vcs are crying about it because they invested heavily in text to video models. and they're sort of in trouble now, because opening eyes sort of taken away. So
+Hamza Farooq
+00:25:48
+there's a lot of rapper stuff that is going on. So we want to get you behind that. So we will try very hard to use, as much
+Hamza Farooq
+00:25:57
+less Chat Gp or open AI products as possible. We will try to do all open source.
+Hamza Farooq
+00:26:04
+And that's the idea. We will do things
+Hamza Farooq
+00:26:08
+that gives you the mode to build an infrastructure company or be the infrastructure person rather than wrapping things around in something which is a wrapper.
+Hamza Farooq
+00:26:19
+And then every time Gpt changes their code your entire code base goes down. I'm saying this because I was the first one to do that, and then I re- realize when Jack Gp. Decided to change his code or Lanchon decided to change its code.
+Hamza Farooq
+00:26:34
+Everything went down, and we did not know what to do, and it was. It was all fun. But there are things so, my honest feedback, or you know, suggestion to you is.
+Hamza Farooq
+00:26:44
+if you don't understand, ask if you are struggling, ask. reach out to us. We are here. There are people on this call who have taken original courses with me, and they will help you.
+Hamza Farooq
+00:26:56
+Terry. I'm looking at you for that. But there are people. Listen. If you don't understand something about basic architectures, ask folks in the class
+Hamza Farooq
+00:27:04
+people will help you. I just want you to not say, Oh, I'm not interested in this because this is taking too much time. Please push yourself, and we have built it in a way so that you can sort of start pushing yourself slowly, and then all of a sudden, you would have jumped
+Hamza Farooq
+00:27:17
+quite fine.
+Hamza Farooq
+00:27:20
+Alright! So
+Hamza Farooq
+00:27:21
+this is what Drag looks like. This is, you know a very popular example. You have a query. You have an embedding model it stores in the vector database. When you run a query, you get retrieve contacts and you have you push it to an ln, and then you get a response.
+Hamza Farooq
+00:27:38
+This is a very basic overview of what drag is. I. My expectation is each and every one of you understand what this is. But this is, and you've been working with it, and you've seen examples of it how it works. Hello! Did you have a question?
+Alok Abhishek
+00:27:52
+Hey? I'm just so. I'm assuming the class knows this thing. But I've been seeing a lot of knowledge. Graph.
+Alok Abhishek
+00:28:00
+Coming up these days. So might be good to explain that a little bit like.
+Hamza Farooq
+00:28:07
+yeah. So yeah, so we will work on that in, I think, modules 2 or 3, 3, 3, maybe, which is advanced retrieval techniques. So we'll implement knowledge graph.
+Hamza Farooq
+00:28:20
+It does have some concerns that it tends to first because of the data, but we we will work on that and see what what we can do. But yes, that's that's something that will come
+Hamza Farooq
+00:28:32
+alright.
+Hamza Farooq
+00:28:34
+and then this is what an enterprise rack looks like. This is. You know, this is taken from Galileo. I really like the company. They've done a great job. And this is this overall thing that you see over here. This is what we will try to recreate with more competence. And
+Hamza Farooq
+00:28:54
+I know it's a lot to look at. You'll be like, Okay, where? Where do I get started? But let's just say we start from here. We basically say, okay, we look at the blue ones, where is the input and the output. So we start with the blue ones. Hey, we have a input user input coming in. And we have a user output coming in
+Hamza Farooq
+00:29:09
+and then, you know, there's lay layer of user authentication. There is input guardrail. So we'll cover guardrail in the next module.
+Hamza Farooq
+00:29:19
+And then, once you have you know, you get to a fact that doesn't need an in. Does it require you a response.
+Hamza Farooq
+00:29:27
+There's a quirky rewrite some of you remember quite the intent model that we created or we discussed about in our last class. I will cover that again over here so that you can, or you can touch base on it.
+Hamza Farooq
+00:29:38
+There are things like hide we'll cover hide what hide is in again, I think, in the next class. But
+Hamza Farooq
+00:29:45
+it's not. It's not a lot like something that's not all unknown.
+Hamza Farooq
+00:29:49
+And then what we'll do is that we look into the encoder retrieval systems and improve ranking
+Hamza Farooq
+00:29:56
+will generate an answer. There's document ingestion, embedding storage, document, storage history storage, feedback storage. We'll discuss all of them. Some of the things about memory storage we'll discuss. So today's classes dedicated to memory storage in multiple forms
+Hamza Farooq
+00:30:11
+first is, we'll talk about the semantic version of it, the semantic hash version of it, and then we will talk about the Redis, which is
+Hamza Farooq
+00:30:21
+one-to-one mapping of the exact search. Query. and then we'll basically sort of see the difference and try to build from there. I want before I go in. I want to show you a great example of what a fully
+Hamza Farooq
+00:30:37
+full, amazing enterprise rack solution looks like. So
+Hamza Farooq
+00:30:42
+we we are going to go to Tripadvisor.
+Hamza Farooq
+00:30:46
+and I want to. I want a name of a city that some of you, or that some of some someone wants to go to in the near future.
+Hamza Farooq
+00:30:58
+Anyone
+Victor Calderon
+00:31:00
+in London
+Hamza Farooq
+00:31:02
+who said, London? Sorry. Oh, Victor.
+Victor Calderon
+00:31:05
+yeah. So you want to go to London? Okay?
+Hamza Farooq
+00:31:09
+So you want to go to London, Kentucky. You want to go to London? Uk. You wanna go to. II understand you're gonna go to London, England, alright, and let's just say you want to go from first to fifth
+Hamza Farooq
+00:31:20
+and you wanna go with your partner. Sorry, Victor. II know I know Victor, so I know stuff about him. And let's just say Victor wants to must see attractions, great food, I think. So.
+Hamza Farooq
+00:31:33
+Let's just say these are a few things that Victor wants to do
+Hamza Farooq
+00:31:39
+when he.
+Hamza Farooq
+00:31:40
+So what Tripadvisor has done is that they have created a new user experience altogether. When you're trying to come up with you know, II call this integrated search.
+Hamza Farooq
+00:31:53
+But previously, in order to create something like this, it would take you hours. But what Tripadvisor has done is that they are able to generate a really good
+Hamza Farooq
+00:32:05
+output for you. based on what you have asked for in one page.
+Hamza Farooq
+00:32:13
+So this is almost like a one pager, so much so that you will be like, okay, I think I might want to try this. I think I might want to look deeper into this and just stay on this page.
+Hamza Farooq
+00:32:25
+This is the example of a integrated enterprise rag solution because it does not just take one document and create a search for output for it. This is the entire website that you could that has been built around a user experience
+Hamza Farooq
+00:32:45
+based on the reference based on some things that you have asked.
+Hamza Farooq
+00:32:50
+and that is this is one of the most powerful pro projects that I've seen.
+Hamza Farooq
+00:32:55
+because you can write the same thing using Chat Gp. But this is not really using chat. Gpd, as the base. This is. there is retrieval in it because it's able to retrieve exact things that you're looking for.
+Hamza Farooq
+00:33:09
+like real things like, I don't think divine restaurant coffee bar might be something that will show up in a product, you know, in an output.
+Hamza Farooq
+00:33:20
+Most importantly, there is no hallucination over here like they're not showing your hotel or a restaurant that does not exist.
+Hamza Farooq
+00:33:27
+So this is the pure enterprise rag output that is generated.
+Hamza Farooq
+00:33:33
+based on, you know, day to day things that you can do. And then, even if you see
+Hamza Farooq
+00:33:40
+day, one is more on the right hand side, like, maybe let's say it's on. It's more on the east. But as you go. the days as you change the days, the activities also change by in a direction. So this is not haphazard output. Also.
+Hamza Farooq
+00:33:54
+it has been done meticulously to be a very good route for you.
+Hamza Farooq
+00:34:01
+This is where the future is. the feature is creating an integrated user experience
+Hamza Farooq
+00:34:11
+where you are so focused on the output which looks like this that you might be like, you know what save itinerary. I'm good to go. I have literally saved hours and hours of work.
+Hamza Farooq
+00:34:22
+This is the power of this product right here.
+Hamza Farooq
+00:34:25
+so we will try to create. I'm pretty sure we can't create most of it. But we will try to create some part of this product in our actual. You know, in our actual way of moving forward so that
+Hamza Farooq
+00:34:40
+I'm not gonna teach you the node Js part of it. But basically, can we create something similar, based on some of the data that we have or data points that we have.
+Hamza Farooq
+00:34:48
+be it historical data or something else. Can we try to push ourselves in that direction. And this is just an example. But the idea is, I want you to all start thinking of a larger than live product.
+Hamza Farooq
+00:35:01
+Don't worry about the ux, just a larger than live product
+Hamza Farooq
+00:35:05
+that has search that has 0 hallucination.
+Hamza Farooq
+00:35:09
+a generation that is so good that you can click. Whenever you get something, you click on it. It takes you to the exact page.
+Hamza Farooq
+00:35:15
+That's the power that I want you to think you have a question. Vishal.
+Vishal Ahuja
+00:35:20
+yeah. I wanted to know, like, if another user were to actually try to plan the same trip to London for 5 days.
+Vishal Ahuja
+00:35:29
+would it show the same stuff over there, or would that is that also getting customized?
+Hamza Farooq
+00:35:36
+So it depends on what you've selected. If you select the exact same thing I think more likely on we'll get very similar stuff.
+Hamza Farooq
+00:35:45
+So if you click on the exactly the same things right then you will continue to see similar things. So the variety that they've given you comes from.
+Hamza Farooq
+00:35:56
+Oh, this all goes away. But let's say the variety
+Hamza Farooq
+00:36:02
+of what they have done comes from the ability to create. You know, the first preference like who you're going with. and the second preference is just a set of things that they've given you.
+Hamza Farooq
+00:36:17
+And then, you know, maybe if you wanna put something else I'm just gonna send me the meet the King now, because the Queen is dead. So meet the king. I'm just gonna say, meet the king.
+Hamza Farooq
+00:36:27
+So this might change a few things, but it's based on the preferences that you've given.
+Hamza Farooq
+00:36:35
+So your job is to come in and take a look at it, and evaluate on how you can make it better.
+Hamza Farooq
+00:36:43
+So what they do is that they are getting more and more responses from people. And based on this, those responses. They're trying to build out something. And maybe you can try to break this by putting in some random stuff
+Hamza Farooq
+00:36:55
+and see what does it come up with?
+Hamza Farooq
+00:36:58
+Right? So this came out pretty similar. It also gave the call, so you will see that. But it did not have ghost bus tour previously. It brought that in.
+Hamza Farooq
+00:37:08
+This is this is some sort of personalization that they are running.
+Hamza Farooq
+00:37:12
+I will try to get the head of trip AI head of AI at Tripadvisor. He came to my Stanford class. So I'll try to ask him to come in again and give a talk about you know what he showed all of us here.
+Hamza Farooq
+00:37:26
+Alright Victor.
+Victor Calderon
+00:37:28
+So so do you know if this if this system is able to like, connect to like, I mean, like live updates, you know, like, for example, there's a concert going on
+Victor Calderon
+00:37:39
+and during the time of your stay like
+Victor Calderon
+00:37:42
+and maybe it will be able to recommend you to go to that one. For example.
+Hamza Farooq
+00:37:48
+I don't know if they can, but we can.
+Hamza Farooq
+00:37:51
+So we will. We will try to give you an idea on how to do that. We'll we'll connect you to live.
+Hamza Farooq
+00:37:57
+We'll basically build something which is live Internet search in real time. And it sort of creates an answer for you and give you some links and things like that with that.
+Alok Abhishek
+00:38:05
+I built a product for tick, which has integration with ticketmaster
+Alok Abhishek
+00:38:12
+and spotify, and couple of other services which will recommend which can recommend you the concerts depending on the artist
+Alok Abhishek
+00:38:22
+name need to do recognition and intent orchestration.
+Hamza Farooq
+00:38:28
+Yep,
+Alok Abhishek
+00:38:30
+hello! We have to bring you in to talk about your food, your food app, too.
+Hamza Farooq
+00:38:36
+This all entire course started with just the fact that I wanted to build with a log. And Zenup and Mark. I wanted to build a food app together. And then we decided, okay, you know what? We should open it to more people. And this key course came to be just for that. So there was a secret group on a slack channel that we were just talking about that. But
+Hamza Farooq
+00:38:54
+as we grow further. This is, gonna help us move, push ourselves. So please
+Hamza Farooq
+00:39:00
+start thinking of your
+Hamza Farooq
+00:39:02
+end. Of course, project from today.
+Hamza Farooq
+00:39:05
+You don't have to know all the components of it. You have to know what you want to build so that we can help you give you the right to nudge and the direction. So I'm gonna keep. Ask, I'm gonna ask. But in the end of next class you're gonna get an assignment that you will require you to
+Hamza Farooq
+00:39:22
+think of your capstone project
+Hamza Farooq
+00:39:24
+based on what you have seen so far in more integrated search. I don't want to see a rag and an output. I want to see something which is just beyond that, because this is beyond that.
+Hamza Farooq
+00:39:35
+And you know what there's one thing missing over here that none of you thought about, or maybe thought about it, not seen flights. They do not show flights over here.
+Hamza Farooq
+00:39:44
+but you didn't miss it. You didn't think about it because they have made it such a beautiful way for you to look at. You stay immersed in it.
+Hamza Farooq
+00:39:51
+So one thing also that will happen from these things. the product metrics. So any I know. Aloe, you are a product manager. Any other product managers here.
+Hamza Farooq
+00:40:02
+anyone else who's a product manager? Alright good. You're you're not a product manager. You you're a technical person.
+Hamza Farooq
+00:40:10
+Nasir. tell me as a product manager, what are the some of the things that people would see on an online product as a consideration.
+Nasir Uddin
+00:40:20
+So the main thing people take a look into is like from the user experience perspective.
+Nasir Uddin
+00:40:25
+the understanding user intent and whether we are removing all the frictions to fulfill the put user intent.
+Hamza Farooq
+00:40:33
+Yeah. And they also look at daily active time, daily active users. So the thing is, you will stick on this page for so long. This is, gonna it's gonna mess up with your metrics.
+Hamza Farooq
+00:40:48
+So the integrated experience of generation is changing the way, or it will change the way we build products now.
+Hamza Farooq
+00:40:58
+And or we measure the importance of that like, because I'm gonna spend so much time going through all of this.
+Hamza Farooq
+00:41:04
+that it's gonna be a new way that we measure experience. And that's what a lot of product managers, if you know some of your product managers or strategists who are leading the team. I think you should. You would want to consider this, that what will be the implications. If we change the way our people search or our people come to our website, it's normal. The same way you go from one to another to another. It's not the number of pages you've seen. It's number of things that you've seen and how many you say, okay, yes, I wanna go ahead with it.
+Hamza Farooq
+00:41:32
+I mean for me.
+Hamza Farooq
+00:41:34
+I don't know whether it is good or bad. I'm just gonna say, okay, you know, this looks great, save it. Find me a flight. I'm good to go.
+Hamza Farooq
+00:41:44
+That's the power of
+Hamza Farooq
+00:41:46
+the new user experience. Of course, in in a few years it will change. But it will basically be a game changer.
+Hamza Farooq
+00:41:53
+Alright.
+Hamza Farooq
+00:41:55
+how do we come up with building these things? How do we look into this? We look into something which is called complex queries when you put in a search which has multi which is multi faceted when I say, plan a vacation to Paris, or when Victor said, Plan me a vacation to London.
+Hamza Farooq
+00:42:13
+It was a complicated query.
+Hamza Farooq
+00:42:15
+And we call that complex queries complex queries is when you take when one query needs to have multiple outputs created from that.
+Hamza Farooq
+00:42:24
+This is what we call a co-pilot.
+Hamza Farooq
+00:42:27
+You can bet we're gonna make you build one.
+Hamza Farooq
+00:42:31
+You're going to sit down. And you're going to think about. I'm going to dig a quay.
+Hamza Farooq
+00:42:34
+And I'm gonna divide that query into multiple queries. And I'm gonna use those multiple queries to search the Internet or search my rags and come up with one great answer. We gonna make you do that.
+Hamza Farooq
+00:42:45
+And that's where you're gonna push yourself to understanding. How do we divide the task into individual things
+Hamza Farooq
+00:42:52
+we can discuss on? How do we divide them? You can basically use an Llm maybe use an Lm like to say, Okay, rewrite this query or divide this query into multiple steps for me. And each query should be a separate one that people can search.
+Hamza Farooq
+00:43:05
+It could just be that.
+Hamza Farooq
+00:43:07
+But we will define them. Hold on, we'll we will define them, and once we have defined them we will take action for each one of them. Once you've taken an action for each one of them, we're gonna combine that answer. That one big answer will be like, hey? If you're going to London, these are the restaurants you should try. These are the ticket events and concert that you should go to. These are the other things that attractions, or whatever right
+Hamza Farooq
+00:43:31
+you start building that out. That's your copilot.
+Hamza Farooq
+00:43:35
+And then you will see
+Hamza Farooq
+00:43:37
+that there's not a big hype like people have created a hype about things. But maybe it's not that that big of a hype that you thought it was.
+Hamza Farooq
+00:43:46
+Maybe you're getting closer and closer, and we can d deconstruct some of the things people have done, and we can do it ourselves.
+Hamza Farooq
+00:43:54
+That's how I see. That's that's the word I see for the scores for you all.
+Hamza Farooq
+00:44:00
+And we really hope to achieve that.
+Hamza Farooq
+00:44:04
+Okay, I'm gonna pause here. Loki, you had a question.
+Alok Abhishek
+00:44:07
+Probably I'm getting ahead here. But so there are 3 ways. I've seen this being done. One is like using Spacey, and all. Second one is the chain of thought, reacting, using agents.
+Alok Abhishek
+00:44:26
+and third, one that I was doing was kind of few shots, prompting, using Llm to find these things. So in this force, or like, what's the best way to do it? Or what would you would be sharing? I hope there's a fourth way to do it.
+Hamza Farooq
+00:44:42
+Dashi, I'm gonna go to you first, and then I come. I'll come to a lot of question.
+darshil
+00:44:49
+I think I have worked a lot on any arp with spacey and stuff. But what I believe is the way people search now is much more complex, and it's not something very easy to detect with any arp.
+darshil
+00:45:02
+So I think if you already have a better option like, we should obviously go with something like chain of thoughts, or even a simple prompt, which is focused on finding the correct entity for us would be much more. The only challenge with all of this would be the the latency factor. So we will also consider the latency factor in when we are building these things.
+Alok Abhishek
+00:45:29
+I also ask, because few short prompting becomes challenging in orchestrating. The next step is orchestrating, and it becomes like deterministic kind of thing. But if I go full on like agent framework, then I expose
+Alok Abhishek
+00:45:44
+it it to more hallucination, and answering like Canada airline, and whatever that they come up with in or like prompt injection thing where they can
+Alok Abhishek
+00:45:55
+ask. IP related questions and all that. So I was trying to figure out how to
+Alok Abhishek
+00:46:00
+a VoIP prompt injection, but kind of keep it flexible. I think we can. We can also do it fine tuning if we want some specific task to be implemented.
+Hamza Farooq
+00:46:13
+So if you see this 1 billion dollar company billions of dollar Worth company has given you 0 almost 0 re availability to actually put anything like a actual.
+Hamza Farooq
+00:46:26
+They do not allow you because they know what's gonna happen. People like you and the shell are, gonna you know, in we're gonna try to break it right? We're gonna try to break it so that we can sort of get into the basics of it. But that's what they're trying to do. This is the next generation where people get creative with their answer questions. So you have to create an interface. So think about it like, maybe you just give click options in the beginning, gather enough information and then go go from there.
+Hamza Farooq
+00:46:54
+Alright. Okay. So
+Hamza Farooq
+00:46:58
+now I'm gonna introduce you to a concept called semantic caching. If you see here, there's nothing mentioned in semantic caching in this in this layout over here. There's just storage.
+Hamza Farooq
+00:47:09
+I think I'll have to reach out to them, and you know, but semantic action is sort of a more recent term that has come up, and it is. I'll start with explaining you, and then we'll we'll go deeper into understanding what all it is.
+Hamza Farooq
+00:47:22
+So we all know
+Hamza Farooq
+00:47:25
+similarity measures. We do similarity measures, and we do a bunch of things around that.
+Hamza Farooq
+00:47:30
+The thing about cement of caching is you save a question that was asked previously, exactly almost in the same form that came before.
+Hamza Farooq
+00:47:40
+So
+Hamza Farooq
+00:47:42
+when you ask a question, you know what is the capital of France? And what you will do is
+Hamza Farooq
+00:47:51
+if you ask another question. Can you tell me the capital of France in terms of caching? Those are 2 different questions.
+Hamza Farooq
+00:47:59
+There's not much similarity, because when you actually measure this, the distance between them
+Hamza Farooq
+00:48:05
+in a non contextual manner.
+Hamza Farooq
+00:48:09
+they're different words. They're they're they're different sentences.
+Hamza Farooq
+00:48:12
+However, when you apply at a contextual form.
+Hamza Farooq
+00:48:17
+and I think what I'll do is I can actually II will also use a pen and pencil and ging just a minute to talk about it. But when you look at a question.
+Hamza Farooq
+00:48:27
+you have to determine what's similar in terms of the content that it is being asked.
+Hamza Farooq
+00:48:33
+and though building those that have SIM, the question wording is different, but the context is ex exactly the same, that what they're asking is exactly the same
+Hamza Farooq
+00:48:44
+that is called symmetrication.
+Hamza Farooq
+00:48:48
+So what we'll do is I will spin up
+Hamza Farooq
+00:48:51
+a document mirror online whiteboard.
+Hamza Farooq
+00:48:56
+Bye-bye.
+Ivan de Souza
+00:49:01
+It's it's this is very interesting. Because
+Ivan de Souza
+00:49:06
+when you talk about semantic caching is like a memory
+Ivan de Souza
+00:49:11
+like a memory of the context.
+Ivan de Souza
+00:49:14
+Yes, to be part of the same
+Ivan de Souza
+00:49:18
+universe. So if I'm talking about financial
+Ivan de Souza
+00:49:25
+discussion, and then I will talk about a place. Of course there is a bank
+Ivan de Souza
+00:49:32
+related to financial discussion. If there is the World Bank ready to apply?
+Ivan de Souza
+00:49:39
+Right? So yes, probably I will have different questions using the word bank. But for the first situation Bank is related to a financial discussion, and then Bank is related to a place
+Ivan de Souza
+00:49:56
+where I will visit. Have you stay right?
+Hamza Farooq
+00:50:02
+So that's what it will do differently. Give me 1 s.
+Hamza Farooq
+00:50:07
+you should all be able to see it. I'm gonna put module. One advanced Llm. Advanced Llm. Save. And what I'll do is
+Hamza Farooq
+00:50:18
+Anyone can view.
+Hamza Farooq
+00:50:23
+Okay? So I'm gonna put this in the chat for everyone to see. So you can also follow like you can save it and store it. This is going to be available to you for about 24 h.
+Hamza Farooq
+00:50:34
+Everyone in the meeting let me know if you can access this.
+Hamza Farooq
+00:50:47
+Can everybody see this one like on their own machine? If you click on the on the link, are you able to get to it?
+Hamza Farooq
+00:50:54
+Okay, great.
+Hamza Farooq
+00:50:57
+So
+Hamza Farooq
+00:51:00
+we're going to talk about
+Hamza Farooq
+00:51:02
+caching first. Brooklyn.
+Hamza Farooq
+00:51:14
+So what is caching? And I apologize for my handwriting. My handwriting is really bad.
+Hamza Farooq
+00:51:19
+I'm gonna try try this again.
+Hamza Farooq
+00:51:26
+Caching is a technique in which you store previously asked questions.
+Hamza Farooq
+00:51:32
+So when somebody asks a question.
+Hamza Farooq
+00:51:37
+what is the capital?
+France?
+Hamza Farooq
+00:51:45
+Right? Let's say you have a query when we ask that query.
+Hamza Farooq
+00:51:49
+most systems, what they do is that they first check that question
+Hamza Farooq
+00:51:55
+in a database.
+Hamza Farooq
+00:51:57
+Some form of database that has this question been asked before. Has somebody asked, you know something like this exact question in the exact wordings? Maybe they converted to a lower case.
+Hamza Farooq
+00:52:08
+Maybe they, you know the other. I think the only thing they do differently is that they convert into a lower case.
+Hamza Farooq
+00:52:16
+but they don't do any other changes. They just convert into a lower case, and they say, Okay, what is the capital of France? If that question has already been answered before.
+Hamza Farooq
+00:52:26
+it will return
+Hamza Farooq
+00:52:31
+the stored answer.
+Hamza Farooq
+00:52:37
+and after a while, when you have run it multiple times when you have run hundreds and thousands of times, then you start seeing a trend of similar questions that are coming up
+Hamza Farooq
+00:52:47
+so, or within the day, like, you know, like you're looking for news. And so you start seeing some things that will come up
+Hamza Farooq
+00:52:54
+and you will say, Okay, you know what we need. We can store this because a lot of people are gonna ask the same question. You know, sometimes when you go to a place, and that person can predict what you're going to say almost immediately before even say it, because they've spoken to so many people with the same question that they know that you're coming with that question.
+Hamza Farooq
+00:53:14
+S, this is the same thing. We will basically store all the information that has been asked before, and using that information. Whenever somebody asks a question, it's if if it's in the database, we will say, Okay, you know what? We'll just return the short answer. If
+Hamza Farooq
+00:53:30
+it is not us before.
+Hamza Farooq
+00:53:37
+what it will do is, it will sort of search for it
+Hamza Farooq
+00:53:44
+and return an answer.
+Hamza Farooq
+00:53:50
+Now, in order to make it keep it fresh and nice. There is something called policy.
+Hamza Farooq
+00:53:57
+so the policy usually is for certain kind of questions or most questions. You store them for 7 days only, or you store them for the day only, or you store them for the hour only. So there are different policies depending on how complex models you're working on. If you're working on a model which needs to be updated every 1 h, you're going to basically say this is going to be something that I update once every hour, so the policy will be that I will store it only for an hour.
+Hamza Farooq
+00:54:24
+I will only store it for a day or 2 days, or 3 like depends on the system. But 7 days is usually something that people do in a lot of cases. So if you're building a S system at your end.
+Hamza Farooq
+00:54:36
+it will have to be determined about how much your system is used. How often it is used so that you can, or how often the data in in it is updated so that you know you can.
+Hamza Farooq
+00:54:49
+you can then update. You know, you can then update it according to that. So you said, you have 7 days or depending on the
+Hamza Farooq
+00:55:04
+too bad. Okay.
+Hamza Farooq
+00:55:07
+so this one basically requires you to have the same question. However. semantic caching is a little different.
+Hamza Farooq
+00:55:20
+Semantic caching is a format in which we previously asked, what is the capital of what is the capital? France?
+Hamza Farooq
+00:55:29
+What is another way? We can ask this question. Any thoughts?
+Alok Abhishek
+00:55:36
+I mean, I can ask, capital of France is
+Hamza Farooq
+00:55:39
+yeah. Or can you tell me
+Hamza Farooq
+00:55:52
+now to a human this is the same question as the other one. There's no difference in it.
+Hamza Farooq
+00:55:57
+But the machine is unable to understand the basics of it. Right? The machine is saying, oh, I don't know. Maybe it's this, right or wrong, or whatever right the machine is able to unable to process that information.
+Hamza Farooq
+00:56:08
+So what we do is we introduce the term called semantic caching, because it measures
+Hamza Farooq
+00:56:16
+the embedding
+Hamza Farooq
+00:56:21
+of query, one
+Hamza Farooq
+00:56:23
+q. One to the embedding, to the qua, to the embedding of query 2.
+Hamza Farooq
+00:56:31
+And using that query.
+Hamza Farooq
+00:56:35
+using that that similarity measure, let's say you Euclidean distance or cosign similarity. You're able to say how similar they are
+Hamza Farooq
+00:56:49
+and based on that, you're able to generate those the closer they are to each other the similar they are. And then that means contextually, we're asking the same question. Since we are contextually asking the same question, we will be able to say, Oh, this is the exact same thing that previous was previously asked.
+Hamza Farooq
+00:57:08
+I'm gonna pause here. Any questions on this?
+Hamza Farooq
+00:57:12
+Hello!
+Alok Abhishek
+00:57:13
+So th, I mean, this was my question, how do we do semantic testing? But at at what threshold would I desired like? It's the same question.
+Alok Abhishek
+00:57:24
+or it's something different, right? Because patience, patience, patience, my friend, we will. We will explore that.
+Hamza Farooq
+00:57:33
+We will explore that. Okay, I'm just right now. I'm saying, let's just set the threshold.
+Hamza Farooq
+00:57:38
+And we can basically run through different ex experiments which we eventually decide what works. You will get to it very fast. You'll be like, okay point 2.3 point 1. If it's you created distance or point 9.8. If it's cosine similarity, you'll get there.
+Hamza Farooq
+00:57:53
+So you should be, you will be able to determine that. Oh, this is the level that I want to do. So.
+Hamza Farooq
+00:57:59
+If you do caching, it is just a similar question. And basically they might do keyword search or something very basic once to look at the keywords and come up with the most similar. But in semantic caching you're actually looking at the question to question, similarity.
+Hamza Farooq
+00:58:14
+question to question similarity. And once you determine. So so you know, this is the same thing as you do drag you determine, based on drag that, hey? This is gonna be my cut off.
+Hamza Farooq
+00:58:25
+At which I'm gonna say, this is a very good match. This is an okay match. And this is a very bad match.
+Alok Abhishek
+00:58:31
+Hello!
+Alok Abhishek
+00:58:33
+In in ran we kind of return, and near as never kind of a thing, and then summarize this, and that's the answer
+Alok Abhishek
+00:58:40
+but this is different, right? Because
+Hamza Farooq
+00:58:44
+we we don't want to answer something which the question was similar. So we set much higher thresholds for that.
+Hamza Farooq
+00:58:54
+So generally in January, generally in semantic caching we set the threshold very high, so that we are absolutely sure that it's very similar.
+Alok Abhishek
+00:59:06
+Is there kind of like a elbow curve, kind of a thing that can help us.
+Hamza Farooq
+00:59:12
+I think we if we come up with enough questions, we can sort of see how, at what level it it performs. So II think if you remember, we did a when when I first thought fast, I showed a data set of similar
+Hamza Farooq
+00:59:26
+similar sentences that could be a great exercise.
+Hamza Farooq
+00:59:31
+unsure?
+Anshu Verma
+00:59:34
+Yeah. Yeah. So generally, when we say caching, so generally, it, perception is like responsibility verifies right? So in this semantic aging, ultimately, we are going to. Let's do the embedding of this query, and compare with respect to another emitting. So if lexical searches there, then definitely faster. But what about this? So it will increase latency.
+Hamza Farooq
+00:59:57
+You will see we will, I will show you the the timing of it. You will see the timing, and you'll be able to say, Oh, this might be worth it. I know I'm showing you very small examples. But vector databases have come a long way. Right? So vector database a good vector database, you can get a response in holly 100 ms.
+Hamza Farooq
+01:00:16
+Right? So it meets up the sla for that.
+Hamza Farooq
+01:00:20
+Ivan.
+Ivan de Souza
+01:00:23
+And
+Ivan de Souza
+01:00:25
+What is the influence of the context in this working tool to establish the the similarity between 2 questions, because
+Ivan de Souza
+01:00:35
+maybe I have similar questions in different contexts
+Ivan de Souza
+01:00:40
+that could generate different answers.
+Hamza Farooq
+01:00:45
+Yes, so
+Hamza Farooq
+01:00:47
+I we. This is why we do embedding. Because what embedding does is that it understands the context. You know, when we do embedding, we understand the context beyond the keyword. This is why we're doing converting into an encoding level based embedding that was, compare the 2 models based on that.
+Hamza Farooq
+01:01:05
+So you will get the same output, like, if it's not similar context, you can try it out. Also, you know. and you can test out because it's the same thing as similar is vector, search that we have done in the previously. That
+Hamza Farooq
+01:01:18
+context is what is all that matters. Right? Context is all we need. Attention is all we need. That is where we're stemming it. To go further.
+Hamza Farooq
+01:01:28
+Right, Mark.
+Mark Lummus
+01:01:31
+Yeah, I'm curious about the the contents of the cache.
+Mark Lummus
+01:01:34
+So I know what the key. I know. I know what the key is now. So we've got a query. These queries are, look similar. Should I? Am I saving the results
+Mark Lummus
+01:01:46
+mean? What? What is? What is? What is in the cache is welcome to door number one. Let let's get started on the coding.
+Hamza Farooq
+01:01:57
+Alright. So what I want you all to do those of you who have not taken this class with me before. What I would like you to do is go to file
+Hamza Farooq
+01:02:05
+and save a copy in your drive.
+Hamza Farooq
+01:02:07
+and use that version of the file like you can put your name in front of it, or you know, however, you want to rename it, but first go to file and make sure you save a copy in your drive
+Hamza Farooq
+01:02:19
+alright from the audio file where
+Hamza Farooq
+01:02:23
+be able to file.
+Vishal Ahuja
+01:02:24
+But where? Where? Exactly?
+Hamza Farooq
+01:02:27
+Oh, right here.
+Hamza Farooq
+01:02:30
+Can you see my screen? Can you all see my screen?
+darshil
+01:02:32
+No.
+Hamza Farooq
+01:02:35
+Oh, I'm sorry. When did I stop?
+Hamza Farooq
+01:02:38
+Oh, I've not been sharing my time so sorry
+darshil
+01:02:41
+they've been watching on Miro.
+Hamza Farooq
+01:02:44
+Okay.
+Hamza Farooq
+01:02:46
+can you see my screen?
+Hamza Farooq
+01:02:47
+Yep, okay. Go to 5.
+Hamza Farooq
+01:02:51
+Save a copy in drive. And if you want to find where this file is. If you go to the Maven notebook, I'm sorry you should. Dasha, you should let me know if I stop when you know if I don't share it back.
+Hamza Farooq
+01:03:05
+I thought I was sharing my screen. I actually have to. I keep switching back from my ipad. So
+Hamza Farooq
+01:03:10
+basically, I forgot about it. Okay? So you should all be on this page.
+Hamza Farooq
+01:03:17
+I'm hoping, and everyone has used collapse before you know what to do. You know the drill. Save a copy in your drive.
+Hamza Farooq
+01:03:25
+You should be, you know you hit, connect, you are connected.
+Hamza Farooq
+01:03:30
+We are going to use the most basic. So see, I am not big on any vector database. So I use the original. The Og, which is fast
+Hamza Farooq
+01:03:39
+faz is the original database similarity search library that came out. Most of the startups that came out early on were just re was just rehashing or creating a wrapper around
+Hamza Farooq
+01:03:52
+fast, and then they started creating their own versions. So now, of course, their own versions exist.
+Hamza Farooq
+01:03:57
+But the baseline underlying base is that you're using fast, which is a semantic search, efficient lab virtual library.
+Hamza Farooq
+01:04:06
+We're going to import a few things.
+Hamza Farooq
+01:04:10
+and then we're going to do. The first thing is we are going to. You're gonna go sign up.
+Hamza Farooq
+01:04:17
+It's free. You don't have to worry about anything. You have to go and sign up for a key. so all you have to do is go here, go go to this website.
+Hamza Farooq
+01:04:26
+Once you have landed on this website, it's it's in the link. The website is in the link.
+Hamza Farooq
+01:04:33
+So you go to that. And I did give a you know, a precursor to it, at least sign up before. But if you haven't, it's okay. And Eric, this is our new website for state of the art online Llms.
+Hamza Farooq
+01:04:48
+I am.
+Hamza Farooq
+01:04:50
+We are still improving it. I promise you. It has improved a lot from the last time, but we are still working on it.
+Hamza Farooq
+01:04:57
+Alright, you hit login. You sign up using Google or something, you know. Please use Google, it's faster. I would just recommend signing up with Google. Once you have logged in, you will reach your, you know.
+Hamza Farooq
+01:05:12
+and then you will basically see a dashboard which says, which probably will say 100. I am the creator of this. So I gave myself more credits. But you will just see maybe a hundred over here
+Hamza Farooq
+01:05:23
+if you go to keys you should be able to generate a key for yourself.
+Hamza Farooq
+01:05:28
+so go ahead and generate a key.
+Hamza Farooq
+01:05:35
+Any challenges up thus far
+Hamza Farooq
+01:05:47
+you can copy the key.
+Hamza Farooq
+01:05:51
+and then you can paste the key right here.
+Hamza Farooq
+01:06:21
+Alright, while everybody gets to
+Hamza Farooq
+01:06:24
+So, Sametra, what you need to do is you need to log in, log out and login again.
+Hamza Farooq
+01:06:48
+Awesome.
+Sahar Nesaei
+01:07:02
+So it sounds that are error in creating key on my end. Let me try again.
+Hamza Farooq
+01:07:14
+Once you do it, you should be able to get it.
+Hamza Farooq
+01:07:29
+Alright. I'm expecting everybody to have logged in so far. If you have not
+Hamza Farooq
+01:07:35
+Okay.
+Hamza Farooq
+01:07:38
+So first, I will explain you what this is.
+Hamza Farooq
+01:07:43
+and then we'll we'll get to. We'll get to the deeper part of what what all is happening.
+Hamza Farooq
+01:07:48
+So first is I want to introduce you to something called that we have built in our company, which is called an Eris Api. We call it the Eris
+Hamza Farooq
+01:07:56
+and
+Hamza Farooq
+01:07:57
+Eris is basically online an Lnm which is connected to the Internet in real time. So when you search for something.
+Hamza Farooq
+01:08:07
+so when you say best Tacos in San Francisco.
+Hamza Farooq
+01:08:11
+It searches the Internet, live in real time and generate a response.
+Hamza Farooq
+01:08:18
+And then you can see the response based on that
+Hamza Farooq
+01:08:23
+feedback that you get, and it will show you the Urs that we use to generate that response for you.
+Hamza Farooq
+01:08:31
+They are still something that we are improving on it, and we are working to, you know, to get it up. Write. There's still some challenges which we are seeing. But
+Hamza Farooq
+01:08:40
+essentially what this is done is that it has created. You know, a set of things that you can sort of lo look into, and it is the most recent like, you know as you would be doing web search.
+Hamza Farooq
+01:08:54
+But instead of just returning you the links, it also returns you
+Hamza Farooq
+01:08:59
+a text that is based on, you know. So you were saying, give me something some examples of best talk with place in San Francisco, and it will sort of give you a response. 1, 2, 3, 4, 5, 6, 7, 8. It will give you those responses all in real time. This is not
+Hamza Farooq
+01:09:15
+being stored in any way like we have not stored this in a github like you can try it out with anything, and you will see that
+Hamza Farooq
+01:09:22
+it's very easy to break. II promise you. It's very easy to break it. We have not put a lot of guardrails in it, because we're still beta testing it.
+Hamza Farooq
+01:09:30
+and that's why we kept it free. But you essentially should be able to search for something just like you would do in perplexity. And you're getting a response associated with that.
+Hamza Farooq
+01:09:42
+Any questions. So far.
+Hamza Farooq
+01:09:46
+So in today's class, what we will do is that we will build semantic cache with using this endpoint for searching for something.
+Hamza Farooq
+01:09:56
+They will be apparent some issues with it. I mean, you'll highlight. It will be like, Oh, this doesn't look good, but we will try to work through all of them, so that, you know, we can discuss and find out what what we are trying to get.
+Hamza Farooq
+01:10:08
+So what does an architecture of a semantic cache look like. So the first thing that happens is when you make a request, you know you start with here. and I'm sorry
+Hamza Farooq
+01:10:26
+when you start with a request.
+Hamza Farooq
+01:10:30
+This is the first part
+Hamza Farooq
+01:10:33
+that you have an Llm. Adapter. That sort of you know you take the response.
+Hamza Farooq
+01:10:38
+and the first thing that thing does is that it converts your query into an embedding.
+Hamza Farooq
+01:10:45
+and once it converts your query into embedding, it goes to the evaluator. It looks at evaluate the similarity such that a log was asking. It basically compares to anything that has already been stored in your vector data, in in your cache storage.
+Hamza Farooq
+01:11:05
+not your vector storage, but your cache storage. So first it makes a search. So let's just call it 3 a.
+Hamza Farooq
+01:11:11
+It makes a recall to the 3 a.
+Hamza Farooq
+01:11:14
+And then, if it doesn't find anything, it can go to vector vector store, which is B, which we call it 3 B, we call it 3 B, it goes there
+Hamza Farooq
+01:11:25
+and then, once we know what is the answer. we go to 4, which is the Llm. And then we return a response right here.
+Hamza Farooq
+01:11:35
+So these are the steps. So if you imagine these are like, let's say these are 4, 5 steps. We're going to do all these 4 5 steps. The first part is when we read, we're gonna read a query
+Hamza Farooq
+01:11:48
+right here, we're going to read a query.
+Hamza Farooq
+01:11:51
+So the first part of the code is, we initialize files index.
+Hamza Farooq
+01:11:55
+I mean, this is all a simple basic thing of setting up the system. We thread us. We use Euclidean distance over here. I hope everyone knows what Euclidean distances. So we are. Gonna use Euclidean distance as a threshold of point 3.
+Hamza Farooq
+01:12:09
+We can do it point one. We can do it point 2. We can do it point 4, whatever we want to do it.
+Hamza Farooq
+01:12:15
+But it's what we're gonna test out through different experiments to see where we feel very comfortable.
+Hamza Farooq
+01:12:23
+The simplest way to do it. The simplest way
+Hamza Farooq
+01:12:26
+is to create is to have a data set. If there are a lot of data sets which are, Hey, this and this
+Hamza Farooq
+01:12:33
+are these 2 questions are very or these 2 statements are very similar, and you have a one or 0. So you can run with this experiment with different
+Hamza Farooq
+01:12:41
+cutoffs that you set yourself.
+Hamza Farooq
+01:12:44
+and then you can determine. These are the ones that makes the most sense for me to keep as a similarity threshold in terms of questions.
+Vishal Ahuja
+01:12:54
+Sorry does does Euclidean distance work for 7 68 dimensions?
+Hamza Farooq
+01:13:01
+It does. It should. It takes more time. It takes more time because it it squares, you know. It has to take a square for each of the dimensions.
+Hamza Farooq
+01:13:10
+but it can. It can. It does work.
+Praveen Jana
+01:13:14
+It's not normalized, right? It can have anywhere.
+Praveen Jana
+01:13:18
+Distance. How can we say point 3 there, right threshold
+Praveen Jana
+01:13:23
+like cosine? If it is points. 8 something.
+Hamza Farooq
+01:13:27
+Yes, that's exactly what my point is. We will experiment. I've just set a random threshold. I'm not saying this is the great. This is the largest and the greatest. But what I want to do is to show you an example. You can move. You can use Cosign over here also.
+Hamza Farooq
+01:13:42
+There's no, there's no point on saying, Oh, this is what you have to do. I'm just giving an example. This is a pace holder for one of the examples.
+Hamza Farooq
+01:13:51
+you know, when you're building semantic or when you're building rags, no 2 people build the same rag style. Right? Is the same thing. Hello! You have a point
+Alok Abhishek
+01:13:59
+2 things. One is, I see you using Mp net, and the second one is equilibrium threshold other. What what is the thought of using equilibrium versus Manhattan versus Cosine and Y. Mp. Net, and not something else like Wh. How did you decided on these things?
+Alok Abhishek
+01:14:20
+honestly, honestly.
+Hamza Farooq
+01:14:50
+right. So it's there's nothing more than that. There's no, there's no rhyme or reasonable. You know we we can use Euclidean or Cosign. We don't use Manhattan because Manhattan is not good for embedding it will always be either Cosign and Euclidean. And you can test it out. Because, okay, I don't like what Humza said. I'm gonna change it to cosign. Please go ahead and do it
+Hamza Farooq
+01:15:09
+and Mp. Net, because Mp. Net is my favorite goat. I don't know why my favorite all my course material. If you have, as you'll see. Npn has been my goat. I don't know why I just.
+Hamza Farooq
+01:15:22
+I just copy paste a lot of code sometimes. So right? Okay, but what I want to get to the big, bigger part is that I've created a Json file. And this was what Mark's question was that, what are you doing? How are you storing the cache? So this is how I store the cash. I store the question. I store the embedding. I don't have to store the embedding, but I store the embedding
+Hamza Farooq
+01:15:44
+and then I store the answers and I store the response text. So there are multiple things. One is the cache itself, which is the like a database. It's not. We don't run similarity measure on that.
+Hamza Farooq
+01:15:56
+We run similarity measure by saving things in the fares index. So once we have found out. we go here.
+Hamza Farooq
+01:16:07
+This cache storage right here has 2 portions to it. Almost the first portion is the vectors.
+Hamza Farooq
+01:16:15
+Vector dB,
+Hamza Farooq
+01:16:18
+for cash.
+Hamza Farooq
+01:16:21
+there's a vector dB for cash storage only, and it stores only the questions.
+Hamza Farooq
+01:16:26
+And if you find a question which is similar, you return the index.
+Hamza Farooq
+01:16:33
+you return the index of that question the way it was stored in your Json file at this point.
+Hamza Farooq
+01:16:42
+and then you return the index of the Json file.
+Hamza Farooq
+01:16:46
+It is very inefficient. I'm not saying it's it's efficient. Please don't. But it's to get you started and understand the intuition behind what semantic caching is doing for you. It is storing the question in the vector, database.
+Hamza Farooq
+01:17:03
+We store the question in the vector vector database. And once we have stored the vector in the database
+Hamza Farooq
+01:17:10
+then we basically look it up. And then, based on that information, we find the closest matching
+Hamza Farooq
+01:17:19
+question. And then the index related to that.
+Hamza Farooq
+01:17:24
+Okay, so what we do over here is
+Hamza Farooq
+01:17:28
+we load the cache, which is a Json file in in our case right now. We haven't spin spun it up yet, so there's nothing there we save it as just as a Json file. Now you can save it as a SQL. Server. You can save it as anything that you want.
+Hamza Farooq
+01:17:43
+This is a structured dataset. You can store it in any format you can save it in a SQL server, or anything that you store your data in, you can store it. This is not the vector database.
+Hamza Farooq
+01:17:55
+So when we get a question.
+Hamza Farooq
+01:17:58
+We basically, the first thing we do is that we create an embedding of that question
+Hamza Farooq
+01:18:03
+as we the, as I showed you before over here.
+Hamza Farooq
+01:18:06
+we generate the embedding of the question.
+Hamza Farooq
+01:18:10
+Once we have generated the embedding of the question, we run a search
+Hamza Farooq
+01:18:15
+in the vector database itself to find the closest question that was answered. That was asked similar to that. Once we find that question. and we say
+Hamza Farooq
+01:18:27
+these 2 things minus one basically means that nothing was returned. and then we say, self Euclidian distance is less than equal to point 3 or the threshold that we have set. Now you can convert this completely
+Hamza Farooq
+01:18:40
+over here.
+Hamza Farooq
+01:18:42
+If you do faz index something else, you can switch it to cosign. Also.
+Hamza Farooq
+01:18:48
+you can switch it to whatever you want
+Hamza Farooq
+01:18:50
+just by changing the changing, the the index of the the version of what you're trying to do.
+Hamza Farooq
+01:18:57
+So you can change it to cosine similarity. You can change it to and approximate neighbor. So whatever is supported in fairs, you can use that to change that, and that would be just similarity. Search that you utilize to find the nearest one.
+Hamza Farooq
+01:19:11
+Good. You have a question.
+Kurt Lozier
+01:19:13
+Yes. It has to do with how are you deciding when a question is a new question.
+Kurt Lozier
+01:19:19
+are you deciding that if it exceeds a certain distance, so we have set it to point 3. That's what I've set it to point 3. So if the Euclidean distance. So Euclid is 0 means it's extremely close, right?
+Hamza Farooq
+01:19:32
+One means, or one or greater means. It's it's further out.
+Kurt Lozier
+01:19:35
+III didn't. I didn't know. I wasn't sure. If if all that were greater than point 3, or if you let it go further away.
+Kurt Lozier
+01:19:42
+would would signify
+Kurt Lozier
+01:19:44
+if if it's less than point 3. And then, if it's point 3 to point
+Kurt Lozier
+01:19:48
+7, it's kind of ambiguous, but greater than 0 point 7 is definitely a new question. I was just looking at point 3. We said it at point 3 that we want to be extremely close. Point 2. You can do point 2. You can do point one, or you can do cosine similarity, which? And you set it at point 8 at cosine similarity.
+Kurt Lozier
+01:20:05
+Okay, thank you.
+Hamza Farooq
+01:20:06
+Any any one of them. All you need to do differently is that you have to initialize the in the Fas index with that relevant Indi. You know, distance metric that you want to u utilize.
+Hamza Farooq
+01:20:19
+Once you have store that you basically run.
+Hamza Farooq
+01:20:23
+And if there is a new, quite, it's a similar question that is found. It will tell you. but I've inverted the the index over here, which is one minus that. So anything like if you get a point 2, I'll say it's so similar to a point 8,
+Hamza Farooq
+01:20:36
+because for you point one similarity doesn't sort of register. So I just did a subtraction on that.
+Hamza Farooq
+01:20:41
+And then once we run that we are able to re retrieve that. How much time it took.
+Hamza Farooq
+01:20:46
+you know, to to return something based on that. However.
+Hamza Farooq
+01:20:52
+when you do not have enough results. You basically run a different different metric, which is basically you save the entire thing in a Json in in the Json folder that your files that you have. And then you basically use your
+Hamza Farooq
+01:21:10
+AI or whatever you're doing to find a question which is relevant to that based on, based on that information like, you basically do a new search. Let's call it the new search. You run the new search, and then it sort of returns you the answer based on that.
+Hamza Farooq
+01:21:24
+That's the basic intuition behind what we are doing. Victor, you have a question.
+Victor Calderon
+01:21:30
+Yeah. So so basically, going back to the threshold value. So if you were to use, for example, instead of using 5 you were to use like scam, would you expect for the same question to have like a different threshold.
+What was that you said? Scan.
+Victor Calderon
+01:21:46
+yeah, yeah. Yeah. So using files you were to use like a like a different type of batting. Would you expect
+Victor Calderon
+01:21:54
+the
+Victor Calderon
+01:21:56
+the stuff like point 3 v point 4 for the same? Like result?
+Hamza Farooq
+01:22:02
+So first thing fares is your vector dB, that we're using over here. Right? So you can any vector dB, you use it will be determined on this transformer encoder model that you're using
+Hamza Farooq
+01:22:12
+right? So if you go change the encoder model, that's where you need to experiment. That's all I'm saying. Experiment.
+Victor Calderon
+01:22:20
+You need to get to a data set where you experiment. Because.
+Hamza Farooq
+01:22:23
+see the reason I'm teaching you. This is when you use the redist or something else they have built in the parameters themselves. You can't change those.
+Hamza Farooq
+01:22:31
+This is you building something yourself. So you are saying, oh, if I get a question like this, I want this similarity. If I get a question like this, I want this kind of similarity.
+Hamza Farooq
+01:22:40
+This is custom building of caching that you can determine the kind of question it is.
+Hamza Farooq
+01:22:47
+and you can determine what to do with that
+Hamza Farooq
+01:22:51
+right? There is an industry level thing that exists. I just don't like it because it fix. It's on one way of doing it, not multiple ways. This is where we can use multiple ways of doing it.
+Victor Calderon
+01:23:03
+Perfect. Thanks.
+What's that?
+Vasanth
+01:23:06
+Yeah. Hi, I have a question about the similar to search.
+Vasanth
+01:23:10
+So from the previous class.
+we discussed about the same
+Vasanth
+01:23:16
+nearest, nearer searches. So this Redis support all those kind of searches like
+Vasanth
+01:23:25
+annoy all those things like that?
+Hamza Farooq
+01:23:28
+I don't know. I honestly don't know. I think they have their own engine.
+Hamza Farooq
+01:23:33
+So I we do have an example of using Redis right here over here.
+Hamza Farooq
+01:23:37
+You can. You're more than welcome to try it out. I think they basically do their own version. I wanted to give you all an expertise that if your data size increases, you can switch and experiment and control all the different metrics that are happening at the same time.
+Hamza Farooq
+01:23:52
+Right? Okay. So once you have created like, you basically say, if it doesn't reach us, I mean the the, the threshold.
+Hamza Farooq
+01:24:02
+Consider it as a new question. And once you have considered as a new question, use the areas. Api, that we have over here that you have created to answer that question
+Hamza Farooq
+01:24:12
+so moment approved. Usually Demos don't go well, but let's just see what happens. So
+Hamza Farooq
+01:24:18
+when we run a demo so let's say, what is the capital of France. You use cash, dot ask
+Hamza Farooq
+01:24:27
+and you got the arms first answer in 1.6 s, the other end 65 s, and the third one in point 6 1 9 s. Okay, this is through online search. Because,
+Hamza Farooq
+01:24:38
+honestly, these questions have been not asked before. So if you go here. And you look at the cache.
+Hamza Farooq
+01:24:44
+you will basically see that the cache is now storing.
+Hamza Farooq
+01:24:49
+Let's just move this here a little bit. The cache now is storing all those things over here. It has stored the information that you just asked as a database, not a vector database. Well, as a database that's storing them.
+Hamza Farooq
+01:25:03
+Now. once you have run this, let's run one more question.
+Hamza Farooq
+01:25:11
+It will say, the capital of India is New Delhi. Okay?
+Hamza Farooq
+01:25:16
+Now we're going to ask the same question
+Hamza Farooq
+01:25:20
+now, what it did is that it found cash
+Hamza Farooq
+01:25:24
+in Row number 3, and it says the capital of India is New Delhi.
+Hamza Farooq
+01:25:29
+and you can see the difference in time that it took to return you an answer.
+Hamza Farooq
+01:25:34
+And this is where your semantic cache is playing. You can change the threshold. Whatever way you want, you can say
+Hamza Farooq
+01:25:42
+so. I just introduced a question mark and imagine the similarity change. So if I just remove this
+Hamza Farooq
+01:25:49
+this question.
+Hamza Farooq
+01:25:51
+the similarities. Code is what? So there is. Contextual play pleases, place things to it. What maybe let's say we go
+Hamza Farooq
+01:26:11
+right? So it was still able to find on the cash. So we changed the question
+Hamza Farooq
+01:26:16
+in so in caching. this would have not worked. because in caching it would have said, this is a completely different question.
+Hamza Farooq
+01:26:25
+but because of the contextual part of it. Ivan, I have. This is something that you asked before, but this is based on just the fact that we had this information saved somewhere. it was able to generate an output based on the contextual similarity of the question.
+Hamza Farooq
+01:26:44
+This is the power of using semantic cache and using semantic hash to build your own applications.
+Hamza Farooq
+01:26:50
+It will speed up the way you generate and answer in a much faster manner. So it's reducing speed by one tenth, you know, like it's bringing it anything that takes, let's say, 3 s over here.
+Hamza Farooq
+01:27:03
+You are getting an answer in point 8 s, or sometimes you're even getting in point 0 7 s. It's just.
+Hamza Farooq
+01:27:08
+it is so much faster. And honestly, the time it has taken the reason it's taking so much time even is because it has to encode your question into an embedding
+Hamza Farooq
+01:27:20
+the biggest problem. When you convert this into multiple forms, you know, when you increase the the number of questions, then you have to bring in a new way of doing semantic caching, or you have to bring in a new measure, so that you can get this similar answer to that.
+Hamza Farooq
+01:27:36
+Ivan.
+Ivan de Souza
+01:27:40
+Oh, I'm thinking he
+Ivan de Souza
+01:27:44
+if that is a restriction for this month, caching strategy for the costs.
+Ivan de Souza
+01:27:51
+because you need the 2 stars
+Ivan de Souza
+01:27:55
+amount of data.
+Ivan de Souza
+01:27:57
+And okay, as you mentioned before, you apply a specific policy
+Ivan de Souza
+01:28:03
+to to start. I started call data.
+Ivan de Souza
+01:28:06
+But I'm thinking maybe the the cost of the storage
+Ivan de Souza
+01:28:12
+could be a restriction for the specific policy or semantics storage. Right?
+Ivan de Souza
+01:28:21
+So, schedule.
+Ivan de Souza
+01:28:22
+Yes. So storage is cheap. Just remember, storage is cheap.
+Ivan de Souza
+01:28:27
+Okay? Cause I'm thinking that if you apply
+Ivan de Souza
+01:28:31
+policies that we coverage  large periods of time.
+Ivan de Souza
+01:28:39
+The costing vote could be high, but not
+Hamza Farooq
+01:28:45
+say it again.
+Ivan de Souza
+01:28:46
+No, I I'm thinking so. If if you apply our policy that we start the symmetric caching for a long period of time.
+Ivan de Souza
+01:28:58
+See?
+Ivan de Souza
+01:28:59
+The cost of this source could be. they are expensive!
+Hamza Farooq
+01:29:06
+No, it's not. It's not. The store is very cheap. See? The thing is
+Hamza Farooq
+01:29:11
+when you run this query, when you run this something like this right on an Llm. You're spending money on an Llm. To generate an answer. You're searching online. So there are like
+Hamza Farooq
+01:29:21
+about a thousand operations that happen in order to get you a new answer.
+Hamza Farooq
+01:29:25
+If you use Redis, you're actually saving money and time, or, you know, semantic caching, saving money and time. So caching was created to save money and time. In the first place.
+Hamza Farooq
+01:29:36
+because storage is cheap.
+Hamza Farooq
+01:29:39
+and if it's structured even cheaper.
+Hamza Farooq
+01:29:43
+it really helps you to get to a cheaper version. So, Victor, I know if you go to London, you're also going to go to Edinburgh. So over here you know best local food and ho! Lo! Local food spots in Edinburgh.
+Hamza Farooq
+01:29:59
+I mean, this online is working really fast today. But let's say it gave you an answer which looks like this. Right?
+Hamza Farooq
+01:30:07
+You ask the same thing.
+Hamza Farooq
+01:30:09
+I mean, this went from point 9 to point 0 7. This is a huge improvement in how we're getting results. So in the end, I'll basically say that
+Hamza Farooq
+01:30:23
+what we are trying to do is we are trying to create
+Hamza Farooq
+01:30:27
+use cases for ourselves where we can store data.
+Hamza Farooq
+01:30:31
+And once we have stored that data. We can query that data instead of searching the online, searching online and returning an answer and trying to create something out of it, you're able to generate something right there. And there.
+Hamza Farooq
+01:30:45
+that's the power of these products that we have in in today's world. I have catching turned on for some of the things also in my end. So you might like, if you have asked a question before, and you ask it again.
+Hamza Farooq
+01:30:56
+Like, even in the online Llm. Outside of this, it might give you a faster answer, because I'm also caching it. But eventually, if you build a large scale application, you can determine what kind of queries need
+Hamza Farooq
+01:31:10
+caching and what kind of worries don't need cash.
+Hamza Farooq
+01:31:14
+So there's so many different drivers that you can apply. And most cases we have found out that a lot of queries are repeated over and over again. Similar queries are repeated over and over again.
+Hamza Farooq
+01:31:24
+and this is beautiful when you're showing a demo to a Vc. They're like, Oh, my God, this is so fast! This is so great. We're gonna give you the 1 million dollar millions and millions of dollars. It hasn't happened yet for us. But the idea that I'm trying to push for is this is how you will build it up.
+Hamza Farooq
+01:31:41
+Right? Okay, I'm gonna pause here. Any questions so far.
+Hamza Farooq
+01:31:48
+Alright, Eric.
+Eric Brichetto
+01:31:50
+so
+Eric Brichetto
+01:31:52
+I can see this being more or less an easy plug and play without really any need to worry about
+Eric Brichetto
+01:32:01
+cash, refresh and whatnot when you are in a proprietary internal enterprise environment where you control the data that is in this pipeline. But when you are dealing with an online Llm context.
+Eric Brichetto
+01:32:17
+where the questions being asked by users are about
+Eric Brichetto
+01:32:22
+things, facts out in the world. That may be.
+Eric Brichetto
+01:32:26
+they might never change like the fall of the Roman Empire, or they might change slowly, such as the CEO of Facebook, or they might be changing very rapidly, such as, Who is the current? CEO of Twitter is so like, how how do you
+Eric Brichetto
+01:32:42
+like?
+Eric Brichetto
+01:32:44
+What what do you do about ensuring proper cache, refresh, and clearing of information in here, when some of these questions are dealing with facts that may change completely outside of your own control.
+Hamza Farooq
+01:32:59
+Absolutely. I think that's where intention models come into play.
+Hamza Farooq
+01:33:04
+And that's where you basically determine. You could put number of hits. You can say, Oh, if this question is, across a certain threshold of number of occurrences
+Hamza Farooq
+01:33:15
+within the day or within one day, you should just cash it.
+Hamza Farooq
+01:33:20
+That's where it gets more and more complicated. That's where you, as a data scientist, sit down and think. Where do I apply this?
+Hamza Farooq
+01:33:27
+See? Right now, Redis gives you one semantic caching. Go home or go or go go large. Right? I'm giving you an option. Let's build. You build your own depending on your use case.
+Eric Brichetto
+01:33:39
+If you are dealing with an online Llm kind of product, though
+Eric Brichetto
+01:33:44
+in your caching questions about facts in the greater world, would you need to manually review the entries in your cache or build some sort of semi automated thing that's like like ref like, remove certain cache entries. If you find out in the greater world that they are now outdated
+Hamza Farooq
+01:34:05
+100%. Yes, yes, 100%. Because right now I'm storing everything. And the the person who's implemented this using redis as a cash.
+Hamza Farooq
+01:34:15
+That's my biggest problem. So we have to change it to. It's a very big nuanced problem. So we are basically almost trying to say that use an Lm to actually answer that also. For us
+Hamza Farooq
+01:34:30
+it's a it's not an easy solution. But I wanted to give you under the hood information on how you can truly do it yourself.
+Hamza Farooq
+01:34:42
+Right? Unchip.
+Anshu Verma
+01:34:46
+My question is at a very high level. It's like semantic similarity, what we are trying to realize right?
+Anshu Verma
+01:34:52
+So with respect to the caching, is there any specific vector, database vector, library? We should target especially for caching. With, like, nothing like we can use anyone right? This is why I use fast. Fest is my favorite.
+Hamza Farooq
+01:35:08
+If you have a big enough machine, you can just use Faz yourself. You don't need to go to quadrant or pinecone, or any. You can go to Pinecone if you want.
+Anshu Verma
+01:35:15
+But you don't have to.
+Anshu Verma
+01:35:17
+This files also supports this incremental update. Let's if any data is coming, it should not happen. So if you see right, I'm in, I'm appending. Listen. All these veterans were first built on the architecture of fast. And then they were later updated.
+Hamza Farooq
+01:35:34
+So if you see here in my code somewhere down here, I'm incrementally adding.
+Hamza Farooq
+01:35:42
+see this?
+Anshu Verma
+01:35:45
+Yeah.
+Hamza Farooq
+01:35:46
+I'm incrementally changing the the the caching. So self dot index dot add embedding is actually adding and embedding in as we go. So this is updating as we go.
+Anshu Verma
+01:35:58
+Alright. Thanks.
+Hamza Farooq
+01:35:59
+right. And if you look at this over here, you will see the cache which has that information right here.
+Hamza Farooq
+01:36:10
+So I'm storing everything also. Alright. we're going to quickly shift our gears for the last 20 min onto something else.
+Hamza Farooq
+01:36:18
+II know we won't be able to complete all of this today. But what I want to do is to give you an intuition on how to push your data to Gcp. Now, you, some of you. I don't expect to have spin up of your own. Gcp.
+Hamza Farooq
+01:36:32
+This is the beauty of having your own having this recording available to you. The assignment for today's class after today's class is based on this notebook.
+Hamza Farooq
+01:36:43
+So this is a notebook that was originally created by a Gcp team and what we did is that re repurpose this Gcp notebook to bring our own data set.
+Hamza Farooq
+01:36:55
+So I'll explain you what's happening over here, and then we'll we'll go further into this. Okay?
+Hamza Farooq
+01:37:02
+So what we do over here is we created. Don't use this password. This is my password. Please set up your own passwords.
+Hamza Farooq
+01:37:10
+Well, what we do is that we spin up
+Hamza Farooq
+01:37:14
+machines.
+Hamza Farooq
+01:37:17
+oops.
+Hamza Farooq
+01:37:19
+Oh, I did not run something here.
+darshil
+01:37:24
+Okay, sorry. I need to run this. Okay, no, no, don't run that. I think you just need to restart the session. Oh, sorry. It's not bad.
+Hamza Farooq
+01:37:35
+Yeah.
+Hamza Farooq
+01:37:37
+Things happen. Right? Okay? So we gonna comment this out. This is not. This is when you have your own server. this one over here. You just run it and you're connected.
+Hamza Farooq
+01:37:51
+We're going to flush our database.
+Hamza Farooq
+01:37:55
+Now I just want you to see what I'm doing. I don't want you to worry about all the things that are happening. You will be able to recreate this yourself.
+Hamza Farooq
+01:38:03
+So what I do is that I connect to my Google Cloud.
+Hamza Farooq
+01:38:08
+That's the first thing I do.
+Hamza Farooq
+01:38:22
+Okay, so what I have been able to do is I would I authenticated myself to my Gcp account.
+Hamza Farooq
+01:38:28
+Okay. once I've connected to my Gcp account.
+Hamza Farooq
+01:38:33
+it will ask me, Hey, wha what do you wanna which project and which region you're in. So I've already sh created one re 1 one project id for myself.
+Hamza Farooq
+01:38:43
+And I've also created a region, you know, it's based on a region.
+Hamza Farooq
+01:38:49
+All this information is available for you on how you can go back
+Hamza Farooq
+01:38:53
+over here. All these, all the information is here for you. You don't have to worry about what's happening. All I want you to do is look at what's going on over here so that you are able to recreate the lab notebook.
+Hamza Farooq
+01:39:09
+So we go here. we initialize vertex. AI,
+Hamza Farooq
+01:39:14
+we got really dark. We initialized vortex AI
+Hamza Farooq
+01:39:19
+and connect to Google cloud. And we're gonna text should test vortex. AI,
+Hamza Farooq
+01:39:31
+okay.
+Hamza Farooq
+01:39:33
+So all what I've done so far is I've just connected things to everything I've connected a redis server there is we've given you the link to connect to the redis server
+Hamza Farooq
+01:39:44
+I have connected to. Gcp. so I'm basically connected to Gcp, right here.
+Hamza Farooq
+01:39:57
+Hmm. interesting.
+Hamza Farooq
+01:40:04
+I'm connected to Gcp. Right here, and all I had to do previously is to create a project which I call Admin Maven advanced Llm.
+Hamza Farooq
+01:40:16
+And I initiated vertex AI. So anyone who does not know what vertex AI is vertex AI is the AI environment that is used by Google to run different applications.
+Hamza Farooq
+01:40:31
+Now, this is where it's more interesting.
+Hamza Farooq
+01:40:39
+Give me 1 s
+Hamza Farooq
+01:40:44
+rerecords. It's
+Hamza Farooq
+01:40:54
+I think this will error out. But let me see if it does. Yes, it does error out.
+Hamza Farooq
+01:41:15
+I'm gonna start one line of the board.
+Hamza Farooq
+01:41:25
+It's when I shipped it here.
+Hamza Farooq
+01:41:32
+So all I all we need to do is is to save hugging us to implement hugging ways. So let me show you what we are doing in from hugging face.
+Hamza Farooq
+01:41:43
+We go down here.
+Thank you.
+Hamza Farooq
+01:41:51
+So last week we went to Georgia Tech and we did the hackathon in Georgia tech. And then what we gave them a data set was basically, we gave them an overview.
+Hamza Farooq
+01:42:02
+We gave them about 6,000 rows of data which had the hotel name, hotel description. It had the review of the review title, the review text
+Hamza Farooq
+01:42:12
+the rating of the hotel, the trip date, the Hotel URL and images price range, and we gave them a bunch of things about the hotel itself
+Hamza Farooq
+01:42:23
+across different cities. And there were about 6,000 altogether reviews in that. In that data, so essentially over here, what we're doing is
+Hamza Farooq
+01:42:35
+we are downloading that data set. So
+Hamza Farooq
+01:42:39
+we are not going to download a Csv file. We're gonna connect to each cloud network. We're gonna connect to Redis on the cloud, we're gonna connect to Gcp on the cloud, and we're gonna connect to hugging face.
+Hamza Farooq
+01:42:51
+So this is how production works. You don't download anything on your computer.
+Hamza Farooq
+01:42:55
+So anyone who has ever taught you to download stuff on your computer, please know in production level, we never do that. We always connect to different ecosystems.
+Hamza Farooq
+01:43:04
+This is what I'm trying to explain to you of what we're doing over here. We're connect, just connecting 2 different ecosystems over here.
+Hamza Farooq
+01:43:13
+I just wanna make sure this is all authenticated.
+Hamza Farooq
+01:43:16
+This is running.
+Hamza Farooq
+01:43:38
+We test. Now, what we do is that we just introduce an embedding model which is called the gecko embedding model by by Gcp, so we're gonna just use whatever Gcp has to offer in terms of embedding model.
+Hamza Farooq
+01:43:52
+The next thing what we do is we will create.
+Hamza Farooq
+01:43:57
+We will download the data set
+Hamza Farooq
+01:44:00
+that was on the cloud, on hugging face directly into a collaborative notebook.
+Hamza Farooq
+01:44:11
+So you see, we just downloaded this data directly from another. Yeah, URL, we did not upload a Csv file
+Hamza Farooq
+01:44:19
+or do anything like that. We just download it directly. And the next thing we do is we add it? Index
+Hamza Farooq
+01:44:37
+review module
+Hamza Farooq
+01:44:40
+more due to one
+Hamza Farooq
+01:44:44
+actually just called it.
+Hamza Farooq
+01:44:46
+Let's see what happens when you quarter.
+Hamza Farooq
+01:44:56
+Now I'll explain you what's what's happening over here. So what we did is
+Hamza Farooq
+01:45:03
+we downloaded the data set from hugging face. And once we have downloaded the data data set from hugging face.
+Hamza Farooq
+01:45:11
+We push that data just now into big query
+Hamza Farooq
+01:45:16
+which is over here.
+Hamza Farooq
+01:45:23
+So this did not exist previously.
+Hamza Farooq
+01:45:26
+So the the vision that we have done is that we use hugging face data
+Hamza Farooq
+01:45:31
+or any data set which exists in a separate space. We bring it to our collab notebook.
+Hamza Farooq
+01:45:36
+We use the collab notebook as a architect, as a point endpoint
+Hamza Farooq
+01:45:41
+to download data from somewhere else. push it to our own environment on big way.
+Hamza Farooq
+01:45:47
+So our data is now stored in our own Gcp space.
+Hamza Farooq
+01:45:52
+Now we've stored it over there. We can query it. You can look on whatever query you want to run on it, you can run it. And then the next thing we'll do is that we'll build rag based on that.
+Hamza Farooq
+01:46:04
+So
+Hamza Farooq
+01:46:07
+once you've created, you have you check the data, you run it.
+Hamza Farooq
+01:46:14
+and you will see that you are able to extract it back. You know you, you are able to download all all the data.
+Hamza Farooq
+01:46:22
+Here are the results.
+Hamza Farooq
+01:46:25
+Okay, I'm gonna pause here. I know I've covered a lot of things. Any I know there will be a lot of questions. But any basic questions on what's happening here?
+Hamza Farooq
+01:46:40
+Any questions?
+Hamza Farooq
+01:46:42
+If it's good.
+Zainab Akhtar
+01:46:45
+Yeah. So for me, I was thinking about like the project I will pursue. And I'm thinking of using more Pdfs. So how are we going to store this into? The big query, for example.
+Hamza Farooq
+01:46:58
+So what you can do is, you can upload the Pdf from wherever you want. Convert into text
+Hamza Farooq
+01:47:04
+and sort of like title text metadata. All about that
+Hamza Farooq
+01:47:10
+into your tech, into your big query database.
+Zainab Akhtar
+01:47:13
+So it's just similar, like how you converted the Csv as in columns, and then just convert the Pdf to this because actually, I'm planning to use an Api which has access to those documents. So that's just more pre processing that I have to do on my end to convert all of that?
+Hamza Farooq
+01:47:31
+Yeah, yeah, and you can store it. Also, you can store it in multiple formats, I just wanted to show you the fastest way to do it.
+Zainab Akhtar
+01:47:39
+Okay,
+Zainab Akhtar
+01:47:42
+so that just means there's more work on my end, before i can actually start the implementation, I i'll, i'll talk to you later. So perfect.
+Hamza Farooq
+01:47:51
+So basically, you have uploaded the data you have the information. And now what we do is we will initiate the vortex, AI
+Hamza Farooq
+01:48:01
+download a few things.
+Hamza Farooq
+01:48:12
+and we'll run a query. There, there are a lot of steps that are happening here. I we have tried to make it as
+Hamza Farooq
+01:48:19
+you know, as wordy as possible, so that you have all the information available that you need. I'm not it is basically
+Hamza Farooq
+01:48:29
+rag at an enterprise level coding.
+Hamza Farooq
+01:48:33
+I. We will be explaining this more in the office hours. Exactly all the things that we do in each step. But this is, you know, sort of home stretch to get you to understand that there is Gcp
+Hamza Farooq
+01:48:46
+that can be orchestrated through collab notebook that can be connected to other ecosystems. so that you are working in a secure environment at an enterprise that will you don't have to worry about? Or how is this hosted, or what is what are different aspects of it. We can take of all of it.
+Hamza Farooq
+01:49:07
+We will create a vector database. We create an index.
+Hamza Farooq
+01:49:13
+I'll try to get to the last part.
+Hamza Farooq
+01:49:16
+Okay, this is where the Llm applications come. So you can. Basically, if you follow through all these steps on any data set, of course, you have to go through. Go through it. you have to go through a few different things, but
+Hamza Farooq
+01:49:31
+once you once you get to a point where you have stored the data, you can do a lot of document retrieval, product, recommendation, chat, bots, summarization. All of the things can be done
+Hamza Farooq
+01:49:42
+using the code that I've given you below.
+Hamza Farooq
+01:49:46
+So when I run a query, what is the best hotel close to the lure.
+Hamza Farooq
+01:49:51
+it will give you a K. And N. Measure. And you can use the keyn measures, similar similar measures that we we we did this before. This will give you, okay, this is these are the ones that are closest to it.
+Hamza Farooq
+01:50:02
+You can build a rack through that.
+Hamza Farooq
+01:50:08
+and I'll show you an example of that real fast.
+Hamza Farooq
+01:50:17
+Okay.
+Hamza Farooq
+01:50:20
+so once you run through the system. It says Beth's Hotel, near the Louvre in Paris. It will basically say, this is the question. These are the sources, and and it will sort of give you an answer based on the information that it was able to derive.
+Hamza Farooq
+01:50:35
+And because I have hotels across different cities, you can ask different about different cities, and we'll give you a bunch of answers that are relevant to that.
+Hamza Farooq
+01:50:46
+Now we will cover a lot of these things as we go through. You know, in our office hours.
+Hamza Farooq
+01:50:54
+I just wanted you all to get a feel about how easy it is eventually that once you've written a good amount of code you can Sp, all you need to do is spin up a project on your collab node on your Gcp platform.
+Hamza Farooq
+01:51:09
+You can download the data from anywhere and using very basic code, very basic pieces of code. You can push that data into bigquery.
+Hamza Farooq
+01:51:18
+And from there you can go back and forth in trying to understand how to implement that.
+Hamza Farooq
+01:51:24
+So I know I've covered a lot a lot of different things, and the idea was to introduce you to different concepts from the deeper end, and then come back. So what we'll do is that in our office hour in on Thursday or Friday.
+Hamza Farooq
+01:51:38
+Dasha will also take you through in deeper detail about this one.
+Hamza Farooq
+01:51:43
+And your assignment basically is to implement the semantic cache that we have discussed for this hotel data set that we have there. I've also given example of how to use Redis, but this is Redis Cache, not submitted cash.
+Hamza Farooq
+01:52:00
+So you, your job will be your assignment will be implement semantic cash and try to write data to Gcd and retrieve from it. You can also use Json locally.
+Hamza Farooq
+01:52:12
+Alright, I'll I'll give a more overview of what to do. But
+Hamza Farooq
+01:52:17
+at the end of the day my ask of you all
+Hamza Farooq
+01:52:21
+is to just push yourself to say, Okay, this is the data set. I've pushed the data set. It isn't my my big query.
+Hamza Farooq
+01:52:29
+So you can imagine you want to go step by step you spin up. Gcp, you make sure all the Apis are enabled, once the Apis are in enabled, you're able to access this data, and when you're able to access the data, you're able to create an output.
+Hamza Farooq
+01:52:43
+So if you want to come to the office hours, that's great. But what I would like you to do when you come to the office hour.
+Hamza Farooq
+01:52:49
+run this code through and through, and then come with questions on what is not working out for you
+Hamza Farooq
+01:52:56
+do not come and say I don't know what to do. II don't know how to sign up for Gcp.
+Hamza Farooq
+01:53:00
+Please don't, please don't ask that question, come and say, Okay, I ran this code. This is where I'm stuck. and I need to fix this. This is where advanced Llm. Will will come into play where we are actually building something truly advanced.
+Hamza Farooq
+01:53:13
+And you'll find very few examples of these kind of things on the Internet.
+Hamza Farooq
+01:53:19
+That's why we wanted to build a course which is more differentiated, and it has depth to it beyond the the basic way of you know the the BBC
+Hamza Farooq
+01:53:30
+alright. So we are at the almost at the top of the hour. I'm gonna stop here. But I wanna open the floor to any questions that anyone will have for me or the team. And we can go from there.
+Hamza Farooq
+01:53:48
+Questions. Anyone. Mark.
+Mark Lummus
+01:53:54
+yeah, maybe this is a bigger topic. I'm curious about context limits for the particular Llm we're talking to. II don't remember you telling us which
+Mark Lummus
+01:54:04
+wh, which Llm or what the context is. So when we get into sending. He, you know here are entries from our cache.
+Mark Lummus
+01:54:16
+Run a query against that. Is that something I should be concerned about. Yet
+Hamza Farooq
+01:54:20
+I think when you run questions, right questions do not have a long context length.
+Hamza Farooq
+01:54:25
+So we are hoping that one question but could be stored in one context length.
+Mark Lummus
+01:54:30
+Well, I'm I'm sorry.
+Mark Lummus
+01:54:32
+There's the question. And then there's the context
+Mark Lummus
+01:54:36
+run this question against this context.
+Mark Lummus
+01:54:40
+Yeah, I agree hopefully, it's all in in one
+Mark Lummus
+01:54:43
+one query, should we be concerned about that yet? Or do we have to do? We have to be defensive later? And is that a separate part of this this class to figure out how to how to do that.
+Hamza Farooq
+01:54:57
+I think what I'm doing is that I'm not S. And let me, if let me make sure I understand the question. You're more concerned about the answer itself. Right? That answer that comes up.
+Mark Lummus
+01:55:08
+I guess I haven't looked at the data close enough to understand how much data I'm going to be sending over to the Llm. You know, to answer a question on
+Mark Lummus
+01:55:18
+I think he's talking about the Llms context and being overflowing and those kinds of things.
+Hamza Farooq
+01:55:25
+Yeah. But I think we're not worried about that because we're looking at question to question.
+Hamza Farooq
+01:55:30
+So questions won't have a context like we expect the question to fit into the basic context length of any Llm that we're using at this point, any encoder that we're using, it should fit into that context length.
+Hamza Farooq
+01:55:42
+II mean, if there's a rarity, then you should have a new question created out of that.
+Mark Lummus
+01:55:49
+Okay. alright.
+Hamza Farooq
+01:55:53
+awesome. Any other questions that can help answer at this point.
+Hamza Farooq
+01:56:00
+what's on?
+Yeah, yeah, this is
+Vasanth
+01:56:05
+general question. Like, so in the beginning, we discussed about
+Vasanth
+01:56:08
+the online source project like the.
+Vasanth
+01:56:11
+So I was curious, like on a high level like, so so here, like in the hotel that I said. you already have the data. Yeah. basically making it into embeddings and then searching
+Vasanth
+01:56:22
+against it. But when you're doing an online, you have the Ap. That you share that for the type of thing
+Vasanth
+01:56:30
+so like, what is it?
+Vasanth
+01:56:32
+Is it like work working against the
+Vasanth
+01:56:35
+screen that already present on like, how does it work? Actually on a high-level light work?
+Hamza Farooq
+01:56:41
+So the online, yeah, the online Ellen, what it does is that it searches like a Google or Doctor Go, and all those different search engines. and once it has searched those search engines it uses that information from them, the links, and then it scrapes the links in real time.
+Hamza Farooq
+01:57:00
+and then it generates an answer for you based on that.
+Vasanth
+01:57:04
+So we are not maintaining any index like it's just
+Hamza Farooq
+01:57:08
+on the fly like it's going against this. Yes, there is some caching which is involved that we have built in, but it's still very nascent to be honest.
+Hamza Farooq
+01:57:22
+Alright! Anything else I can help answer. I know this was a lot to taken in in the last 2020 min. I did promise you this is going to be a heavy course. This is a heavy course. It is built so that you can push yourself and get out of lank chains and llama indexes, and all of that. We want you to be doing what we are doing and in our company base. So you know, to build something at the production scale
+Hamza Farooq
+01:57:49
+Victor.
+Victor Calderon
+01:57:50
+Yeah. So regarding the like, the first homework. So first, we're gonna find information for the homework. And second, like, where should we post it?
+Hamza Farooq
+01:58:01
+I think you should send you. Could you could upload the answer in a collab notebook.
+Hamza Farooq
+01:58:07
+you know, create a Nuclide notebook, and maybe you can connect like I will not see if it's working. I would like to see like, you know, you have run it before, so that you can. That, I can see the outputs. And I will. Basically, if you go to Maven, I will publish the assignment as a lesson
+Hamza Farooq
+01:58:25
+or a project, so you can. It will remind you that you have to do this project sounds good. Thanks, alright. Is that it?
+Zainab Akhtar
+01:58:34
+So chat. Gp has this new memory feature, and I was trying to think, is it related to what we've been taught today, or because they haven't said anything on their blog. So how does that? Do you have any idea how it works? Well, that is a memory of the context of the conversation. So basically, it's more like we will remember all the things that you'd like, you know. You start a chat
+Hamza Farooq
+01:58:57
+at the top, and you're like, Oh, I want you to remember who I am or like. You say, you know. Can you? Can you write me an overview about a company that I'm calling Zenup Inc.
+Zainab Akhtar
+01:59:08
+So it will remember Zenap, inc, as you go through
+Zainab Akhtar
+01:59:11
+so this is not it's not related to like it's not a question to question, thing, okay, got it makes sense
+Hamza Farooq
+01:59:20
+for me.
+Praveen Jana
+01:59:21
+Basically, my question is like, whenever we we are using these Llm based search.
+Praveen Jana
+01:59:28
+are we getting the return on investment here? Because each and every call it will go through the gpus and all. And at the end of the day
+Praveen Jana
+01:59:36
+is it adding, is it creating any benefit to the organization, or it's a waste of money.
+Hamza Farooq
+01:59:41
+Yeah. Yeah. So let me ask you answer you in a different way. You saw the trip advisor thing right.
+Praveen Jana
+01:59:49
+It's enough personalized. Then you'll convert. Hmm.
+Hamza Farooq
+01:59:54
+then you basically triple. Reza has made the money.
+Maybe
+Hamza Farooq
+01:59:58
+that is the Roi that you're looking for
+Hamza Farooq
+02:00:02
+the user the option into the system.
+Praveen Jana
+02:00:06
+For example, in an e-commerce company like, I'm searching for 3 reasons. In that case, is it worth doing element research here?
+Hamza Farooq
+02:00:15
+Yeah, it is. It is, it is. It is very much useful because you can understand context. And you can also break down the complex query into simpler parts.
+Hamza Farooq
+02:00:25
+You will say I want an evening attire attire. Instead of saying I'm a pad and a shirt and jacket, and all of that, you'll say, Okay, can you tell me more like it would converse with you?
+Hamza Farooq
+02:00:35
+So conversation will be advantages. If you want to do discovery. If you just want this exact thing, then of course you don't need it, but
+Hamza Farooq
+02:00:44
+it's for the use case that you need.
+Hamza Farooq
+02:00:48
+It's an option added on like it's the same thing you use right. You did not use it when it wasn't there. And you like, I'm not missing anything. And now you actually miss it.
+Hamza Farooq
+02:01:01
+because the because the delta of addiction is there? This is what Uber did. Uber is the first company that I feel came in and changed our way of doing things because it was frictionless integration. New phone.
+Hamza Farooq
+02:01:15
+I think it's great that it exists. But I'm just saying that it it did not exist before. And you didn't want you didn't know that you were missing it
+Hamza Farooq
+02:01:26
+right side.
+Sai Yashwant
+02:01:29
+Yeah. So we, I think I think we've seen examples in the notebook where we are trying to cache the question itself. But is there a qualifying criteria also to look at from an answer standpoint? Right? So how
+Sai Yashwant
+02:01:43
+quality? The answer and how good? The answer was.
+Hamza Farooq
+02:01:47
+Yeah, yeah, yeah, that is a very important thing, right? And we don't know. See, there is no human feedback human feedback in when we use online tools. There's very difficult to get human feedback right
+Hamza Farooq
+02:02:01
+like we can't even do a thumbs up and thumbs down to a Netflix show
+Hamza Farooq
+02:02:04
+because we are like. Oh, no, no! This is the additional thing that I have to do in my life. So the behavior is
+Hamza Farooq
+02:02:11
+not explicit, feedback, implicit feedback. So you have to create over and over again. Eventually, you get to a point where you're like, oh, this is what we are gonna store.
+Hamza Farooq
+02:02:22
+So we have to run evaluations on ourselves back and forth. This is why Google is successful. See, rag is great creating a creating, creating a search engine. You can create it in in half a day.
+Hamza Farooq
+02:02:32
+A very good search engine.
+Hamza Farooq
+02:02:35
+which it retrieves, and it is fast. But you want to create a search engine, which is good for the customer. That is evaluation. And that's when you get human feedback on how it is working for you.
+Hamza Farooq
+02:02:50
+Right? So you need people to say, I mean, perplexity has at reportedly 10 million daily active users.
+Hamza Farooq
+02:02:57
+I think they used to have great answers. They don't have great answers anymore.
+Vishal Ahuja
+02:03:04
+I had one quick question to ask. So I recently came across a very interesting tweet where? A particular question that a user had asked on, Cora
+Vishal Ahuja
+02:03:16
+was answered, using chat GPT. And Chad, Gp. Had badly hallucinated and Google indexes Kora. So Google, when search for similar things was so showing Cora's hallucinated answer as the top response
+Vishal Ahuja
+02:03:32
+in that kind of a scenario. This online Llm thing like, how do we know whether we're actually retrieving the correct links or not.
+Hamza Farooq
+02:03:42
+I'm going to tell you one word.
+Hamza Farooq
+02:03:44
+and that person that take a one name that name is in this call is his name is Eric. Eric is working very hard to fight that he's working on misinformation. He's working on breaking those those norms of what you know these things are creating. So he's working. So imagine
+Hamza Farooq
+02:04:04
+you are saying something. And that hall hallucinated right? What if it's actually wrong? It's just ethically wrong information, right? Agreed. Even that is being pushed.
+Vishal Ahuja
+02:04:15
+Yes.
+Hamza Farooq
+02:04:16
+and we are not keeping an eye on it. So this is a very big problem.
+Hamza Farooq
+02:04:21
+This is why, you know, I love having Eric on in in our sessions because he fights that he's working with companies that fight, that on entry trust, and all of that. And it will be a while before we eventually get to it.
+Hamza Farooq
+02:04:34
+It will be a while before, because now we will go into misinformation of insanity, and our elections are coming. You know us, elections are coming. So I mean, Indian elections are coming in us, and elections are coming, and misinformation is both very high in both the countries. I mean, it's also high in other countries. But these countries produce so much text.
+Hamza Farooq
+02:04:54
+So there's gonna be a lot of misinformation. And we have to fight that I don't know how to do that. I don't have the answer to that.
+Vishal Ahuja
+02:05:00
+Sorry. I just have one follow up question. So I was thinking, like is, are there any good applications of this kind of you know, online, Llm's
+Vishal Ahuja
+02:05:12
+within an organization itself, like, where then, you're not hitting the Internet per se. But you're hitting the Internet.
+Vishal Ahuja
+02:05:22
+And like, do you have any examples top of your head?
+Hamza Farooq
+02:05:27
+I mean, basically.
+Hamza Farooq
+02:05:30
+you are able to create or generate more information which will support a decision.
+Hamza Farooq
+02:05:36
+So, Gito.
+Hamza Farooq
+02:05:39
+you connect to Juda
+At that online or Internet on who can can can connect it
+Hamza Farooq
+02:05:45
+will will help you with that.
+Hamza Farooq
+02:05:47
+So there are multiple use. I think the one on one came to my mind, is 0. The number 2 is is a github copilot of sorts that can connect to the Internet of the company, and it does not have the repository as a rag. It just searches it in real time. If it's indexed within the company, then it can find that answer
+Hamza Farooq
+02:06:08
+right? Zena. Last question from Zenith. All these aspects
+Zainab Akhtar
+02:06:18
+so when we go into production deployment. Are we going to shift away from Google Collab? And how does that work?
+Hamza Farooq
+02:06:26
+I would like to stay? Stick to one thing. I will explain you different architectures, so we'll explore something in azure. So the least
+Hamza Farooq
+02:06:34
+thing that I will use is azure. I don't like azure. It's just very difficult to use.
+Hamza Farooq
+02:06:38
+Sorry, Eric. But then, aws, and Gcp is what we're going to use in most cases. So I wanted to show you. Gcp, because Gcp. Has a lot of provisions for AI related things.
+Hamza Farooq
+02:06:53
+Aws is great for production of software engineering.
+Hamza Farooq
+02:06:58
+Azure is good for open AI endpoint. Only
+Zainab Akhtar
+02:07:04
+nothing else.
+Hamza Farooq
+02:07:06
+Sorry if anybody works for Microsoft. II just have a dislike for them. I could never use azure like I could never bring myself to using azure.
+Hamza Farooq
+02:07:15
+Anyways, folks, thank you so much for for today's class. We will be going into deeper details about different things. But
+Hamza Farooq
+02:07:23
+please work on these things like the. This course will require to work hands-on.
+Hamza Farooq
+02:07:29
+If for any reason you need to drop off from the course, I will basically like we will be able to refund you after the first class, only not after the first class. So if you have done like, if you've taken the second class and you say, I don't think this is for me. We'll have to deduct or be able to follow up with the with the policy. But if the first class you like comes up. This is too complicated for me. This is too technical. Maybe I'll take the foundational course with you. We will move you to the foundational course.
+Hamza Farooq
+02:07:55
+But this course has expectation that you should know python. You should know Rag based solutions, and you should be able to write code on collab, and then, you know, go with Gcp. And so on. So it
+Hamza Farooq
+02:08:08
+alright
+Hamza Farooq
+02:08:10
+so II won't let you drop off on it, but because I have taught you in multiple courses. So I'm gonna expect you to be here. And also because I like you a lot other than that, everyone. Thank you so much for being here today. Thank you for good first class. I will see you all. We'll see you on Thursday, on Friday, on the office hour, Bill. Send it out by tomorrow, and then you should be able to to connect. I just wanna make sure, Natalia. And but and
+Hamza Farooq
+02:08:39
+those should are available so that they can answer any questions for you. Thank you. Everyone have a good day. Good night. Good evening. See you.
+
